@@ -1,0 +1,239 @@
+.h1 {
+    @apply text-[50px] leading-[64px] text-[#222] font-semibold;
+    @apply text-[#800080];
+
+}
+
+.h2{
+    @apply text-[46px] leading-[54px] text-[#222] font-semibold;
+}
+
+.h4{
+    @apply text-[20px] text-[#222] font-semibold;
+    @apply pb-4;
+}
+
+.h5{
+    @apply text-[16px] font-semibold;
+}
+
+.h6{
+    @apply text-[12px] font-semibold;
+}
+
+.p{
+    @apply text-[#465b52] text-base;
+    margin: 15px 0 20px 0;
+}
+
+.section_p1{
+    padding: 40px 80px;
+}
+
+.section_m1{
+    @apply my-10 mx-0
+}
+
+.btn_normal{
+  @apply text-sm font-semibold py-[15px] px-[30px] text-[#000] bg-[#fff] rounded;
+  @apply cursor-pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;  
+}
+
+.btn_white{
+    @apply text-[13px] font-semibold py-[11px] px-[18px] text-[#fff] bg-transparent;
+    @apply cursor-pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;  
+  }
+
+/* Navigation */
+
+.logo {
+  @apply flex items-center text-[#554747] gap-2;
+}
+
+/* .logoText {
+  font-size: 18px;
+  color: #1a1a1a;
+} */
+
+.arrows {
+  @apply flex flex-col items-center text-[10px] mt-[6px];
+}
+
+.header{
+    @apply flex justify-between items-center py-5 px-20;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    background: #fff;
+    transition: 0.3s ease;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar{
+    @apply flex items-center justify-center;
+}
+
+ul li{
+    @apply py-0 px-5;
+    color: #525858;
+    @apply hover:text-blue-500;
+    position: relative;
+}
+
+ul .active{
+    @apply text-blue-500;
+}
+
+.p_listing{
+    @apply border-blue-600 border-[1px] rounded-lg;
+    @apply px-7 py-2
+}
+
+.hamburger{
+    display: none;
+    align-items: center;
+}
+
+/* Media Query */
+@media (max-width: 1050px) {
+    .section_p1{
+        padding: 40px;
+    }
+
+    .navbar {
+        @apply flex flex-col items-start justify-start;
+        @apply fixed top-0 right-[-300px] h-[100vh] w-[300px];
+        @apply bg-[#E3E6F3] pt-20 pr-0 pb-0 pl-[10px];
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar li{
+        @apply mb-[25px];
+    }
+
+    .hamburger{
+        display: block;
+        align-items: center;
+    }
+
+    .hamburger ul{
+        @apply flex flex-col items-start justify-start;
+        @apply fixed top-0 right-0 h-[100vh] w-[300px];
+        @apply bg-[#E3E6F3] pt-10 pr-0 pb-0 pl-[10px];
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger ul li{
+        padding-bottom: 25px;
+    }
+
+    .hamburger .ham_icon {
+        @apply text-[#1a1a1a] text-5xl pl-5 cursor-pointer;
+    }
+
+    .hamburger .ham_icon2 {
+        @apply text-[#1a1a1a] text-5xl cursor-pointer;
+    }
+}
+
+@media (max-width: 830px) {
+}
+
+@media (max-width: 799px) {
+    .section_p1{
+        padding: 40px;
+    }
+
+    .navbar {
+        @apply flex flex-col items-start justify-start;
+        @apply fixed top-0 right-[-300px] h-[100vh] w-[300px];
+        @apply bg-[#E3E6F3] pt-20 pr-0 pb-0 pl-[10px];
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar li{
+        @apply mb-[25px];
+    }
+
+    .hamburger{
+        display: block;
+        align-items: center;
+    }
+
+    .hamburger ul{
+        @apply flex flex-col items-start justify-start;
+        @apply fixed top-0 right-0 h-[100vh] w-[300px];
+        @apply bg-[#E3E6F3] pt-10 pr-0 pb-0 pl-[10px];
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger ul li{
+        padding-bottom: 25px;
+    }
+
+    .hamburger .ham_icon {
+        @apply text-[#1a1a1a] text-5xl pl-5 cursor-pointer;
+    }
+
+    .hamburger .ham_icon2 {
+        @apply text-[#1a1a1a] text-5xl cursor-pointer;
+    }
+}
+
+@media (max-width: 550px) {
+    .section_p1{
+        padding: 20px;
+    }
+
+    .header{
+        @apply py-[10px] px-[30px];
+    }
+
+    .h2{
+        @apply text-[32px];
+    }
+
+    .h1{
+        @apply text-[32px];
+    }
+
+    .p{
+        @apply text-sm font-medium mb-5;
+    }
+}
+
+@media (max-width: 440px) {
+}
+
+@media (max-width: 320px) {
+    .section_p1{
+        padding: 20px;
+    }
+
+    .header{
+        @apply py-[14px] px-[14px];
+    }
+
+    .h2{
+        @apply text-[20px] leading-10;
+    }
+
+    .h1{
+        @apply text-[25px] leading-10;
+    }
+
+    .p{
+        @apply text-sm font-medium mb-5;
+    }
+}
+
+@media (max-width: 300px) {
+}
