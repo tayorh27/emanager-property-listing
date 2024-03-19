@@ -166,7 +166,6 @@ ul .active{
     .hamburger{
         display: block;
         align-items: center;
-        cursor: pointer;
     }
 
     .hamburger ul{

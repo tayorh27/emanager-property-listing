@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import {
+  BrowserRouter as Router,
   Route,
   Routes,
   useLocation,
@@ -9,7 +10,6 @@ import SignUp from "./pages/SignUp";
 import LogIn from "./pages/Login";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
-import AppRoutes from './DASHBOARD/Routes/DashBoardAppRoutes'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -24,17 +24,18 @@ const ScrollToTop = () => {
 function App() {
   return (
     <div className="App">
-      <ScrollToTop />
-      <main>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/dashlayout/*" element={<AppRoutes />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </main>
+      <Router>
+        <ScrollToTop />
+        <main>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </main>
+      </Router>
     </div>
   );
 }
