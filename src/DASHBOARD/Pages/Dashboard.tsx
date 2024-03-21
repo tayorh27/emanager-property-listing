@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { MdOutlineHomeWork, MdOutlineGroups  } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import { useStateProvider } from '../context/StateProvider';
 
 type CommonObj = {
   icon: React.ReactNode;
@@ -51,11 +52,15 @@ const Dashboard = () => {
     },
   ]
 
+  const {setActiveLink} = useStateProvider()
+
   return (
     <DashStyles className='h-[100%] w-inherit flex flex-col items-start px-10 py-5 gap-[3rem] mt-[2rem]'>
       <div className="top flex w-[100%] flex-row items-center justify-between">
         <span>Welcome James</span>
-        <button className='px-6 py-2 bg-[#294B8C] text-white text-sm cursor-pointer rounded-[8px]'>post a listing</button>
+        <Link to='listings' onClick={() => setActiveLink('listings')}>
+          <button  className='px-6 py-2 bg-[#547CC9] text-white text-sm cursor-pointer rounded-[8px]'>post a listing</button>
+        </Link>
       </div>
       <GridComponent dataArray={data}/>
     </DashStyles>
@@ -78,14 +83,15 @@ const GridComponent : React.FC<{ dataArray : ArrayItemType[] }> = ({dataArray}) 
 }
 
 const SpecialDiv = ({item} : {item : SpecialObj}) => {
+  const {setActiveLink} = useStateProvider()
   return (
     <div className="special">
       <div className="top">
         <span>{item.label}</span>
         <span className='text-[green]'>{item.status}</span>
       </div>
-      <Link to='subscription'>
-      <button>{item.buttonText}</button>
+      <Link to='subscription' onClick={() => setActiveLink('subscription')}>
+        <button>{item.buttonText}</button>
       </Link>
     </div>
   )
@@ -114,6 +120,7 @@ const GridComponentStyle = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   font-size : 0.85rem;
+  position : relative;
 
   .grid-item {
     border: 1px solid #ccc;

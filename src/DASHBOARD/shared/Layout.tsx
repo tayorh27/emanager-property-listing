@@ -3,16 +3,19 @@ import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
 import Sidebar from './Sidebar'
 import Header from './Header'
+import ContextProvider from '../provider/ContextProvider'
 
 const Layout = () => {
   return (
-    <LayoutStyle>
-      <Sidebar/>
-      <div className="main">
-        <Header/>
-        <div>{<Outlet/>}</div>
-      </div>
-    </LayoutStyle>
+    <ContextProvider>
+      <LayoutStyle>
+        <Sidebar/>
+        <div className="main">
+          <Header/>
+          <div>{<Outlet/>}</div>
+        </div>
+      </LayoutStyle>
+    </ContextProvider>
   )
 }
 

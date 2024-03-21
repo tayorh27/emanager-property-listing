@@ -9,6 +9,7 @@ import { MdOutlineHomeWork } from "react-icons/md";
 import classNames from 'classnames'
 import { FiSettings } from "react-icons/fi";
 import { IoMdHelpCircleOutline } from "react-icons/io";
+import { useStateProvider } from '../context/StateProvider';
 
 const BottomLinks = [
   {
@@ -60,12 +61,7 @@ const DashboardSideLinks = [
 const linkclass = 'flex items-center px-3 py-2 gap-3 mb-3 font-light text-base text-[0.8rem] hover:bg-[#294B8C] hover:text-[#fff] pointer rounded-[8px] hover:no-underline active:text-[#fff]'
 
 const Sidebar = () => {
-  const { pathname } = useLocation();
-  const [activeLink, setActiveLink] = useState(pathname);
-
-  const handleLinkClick = (path) => {
-    setActiveLink(path);
-  };
+  const {NavigateLink , activeLink} = useStateProvider()
 
   return (
     <SideBarStyles>
@@ -79,7 +75,7 @@ const Sidebar = () => {
             key={item.key}
             item={item}
             isActive={activeLink === item.path}
-            onClick={() => handleLinkClick(item.path)}
+            onClick={() => NavigateLink(item.path)}
           />
         ))}
       </div>
@@ -89,7 +85,7 @@ const Sidebar = () => {
             key={item.key}
             item={item}
             isActive={activeLink === item.path}
-            onClick={() => handleLinkClick(item.path)}
+            onClick={() => NavigateLink(item.path)}
           />
         ))}
       </div>
