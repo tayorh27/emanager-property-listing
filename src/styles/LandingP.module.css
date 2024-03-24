@@ -54,6 +54,7 @@
 
 .logo {
   @apply flex items-center text-[#554747] gap-2;
+  @apply hover:text-blue-500;
 }
 
 /* .logoText {
@@ -71,7 +72,7 @@
     background: #fff;
     transition: 0.3s ease;
     z-index: 999;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
