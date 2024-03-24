@@ -1,0 +1,31 @@
+/* Listing Hero part */
+.list_hero{
+    background-image: url("../assets/img/testAssets/unsplash_MP0bgaS_d1c.webp");
+    @apply flex justify-center text-center flex-col w-[100%] h-[75vh] p-[14px] mt-[1px];
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.list_hero h2 {
+    @apply w-[45%] ml-auto mr-auto;
+}
+
+.list_hero h2, .list_hero p{
+    @apply text-[#fff];
+}
+
+/* Pagination part */
+.pagination{
+    @apply text-center;
+}
+
+.pagination .pagination_link{
+    @apply bg-[#800080] py-3 px-5 rounded font-semibold text-[#fff] mr-1;
+}
+
+@media only screen and (max-width: 600px) {
+    .pagination {
+        margin-top: 0; 
+    }
+}

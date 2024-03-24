@@ -7,8 +7,10 @@ import Home from "./pages/Home";
 import OurPartners from "./pages/OurPartners";
 import Faqs from "./pages/Faqs";
 import Contact from "./pages/Contact";
-import PageNotFound from "./pages/PageNotFound";
 import AppRoutes from "./DASHBOARD/Routes/DashBoardAppRoutes";
+import ListAs from "./components/ListAs/ListAs";
+import PageNotFound from "./pages/PageNotFound";
+
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -34,6 +36,7 @@ function App() {
           <Route path="/ourpartners" element={<OurPartners />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/contactus" element={<Contact />} />
+          <Route path="/list-as" element={<ListAs />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
