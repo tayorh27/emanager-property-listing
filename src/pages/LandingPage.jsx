@@ -21,7 +21,7 @@ const LandingPage = () => {
   return (
     <div>
       <div id="nav_part">
-        <section id="Header" className={styles.header}>
+        <section id="header" className={styles.header}>
           <div className={styles.logo}>
             <Link to="/" className={styles.logoLink}>
               <img src={logo} alt="logo" />
@@ -52,7 +52,7 @@ const LandingPage = () => {
                 <Link to="/contactus">Contact Us</Link>
               </li>
               <li className={styles.p_listing}>
-                <Link to="/postlisting">Post a listing</Link>
+                <button>Post a listing</button>
               </li>
             </ul>
           </div>
@@ -85,11 +85,17 @@ const LandingPage = () => {
                   <Link to="/contactus">Contact Us</Link>
                 </li>
                 <li className={styles.p_listing}>
-                  <Link to="/postlisting">Post a listing</Link>
+                  <button>Post a listing</button>
                 </li>
               </ul>
             )}
           </div>
+        </section>
+      </div>
+
+      <div id="hero_part">
+        <section id="hero" className={styles.hero} >
+          <div></div>
         </section>
       </div>
     </div>
