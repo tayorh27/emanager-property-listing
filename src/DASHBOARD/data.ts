@@ -1,4 +1,4 @@
-type SubscriptionPlan = {
+export type SubscriptionPlan = {
   name : string,
   buttonText : string
   price : number,
