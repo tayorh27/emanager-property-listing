@@ -9,6 +9,7 @@ import Faqs from "./pages/Faqs";
 import Contact from "./pages/Contact";
 import AppRoutes from "./DASHBOARD/Routes/DashBoardAppRoutes";
 import ListAs from "./components/ListAs/ListAs";
+import ListAsLandlord from "./components/ListAs/ListAsLandlord";
 import PageNotFound from "./pages/PageNotFound";
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/list-as" element={<ListAs />} />
+          <Route path="/list-as-landlord" element={<ListAsLandlord />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>

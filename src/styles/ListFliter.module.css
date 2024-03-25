@@ -28,7 +28,9 @@
 }
 
 .activeButton{
-    @apply text-[#000];
+    /* @apply text-[#000]; */
+    @apply bg-[#fff] text-blue-500 !important;
+
 }
 
 @media (max-width: 425px) {

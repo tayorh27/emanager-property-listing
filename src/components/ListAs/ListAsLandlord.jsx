@@ -5,7 +5,7 @@ import styles from "../../styles/LandingP.module.css";
 import listing from "../../styles/Listing.module.css";
 import filter from "../../styles/ListFliter.module.css";
 
-const ListAs = () => {
+const ListAsLandlord = () => {
   return (
     <div>
       <MainNav />
@@ -35,25 +35,25 @@ const ListAs = () => {
               </button>
               <button
                 type="button"
-                className={`${styles.btn_normal}`}
+                className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Media
               </button>
               <button
                 type="button"
-                className={`${styles.btn_normal}`}
+                className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Location
               </button>
               <button
                 type="button"
-                className={`${styles.btn_normal} `}
+                className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Details
               </button>
               <button
                 type="button"
-                className={`${styles.btn_normal}`}
+                className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Amenities
               </button>
@@ -66,4 +66,4 @@ const ListAs = () => {
   );
 };
 
-export default ListAs;
+export default ListAsLandlord;
