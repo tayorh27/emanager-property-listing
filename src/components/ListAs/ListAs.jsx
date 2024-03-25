@@ -25,40 +25,34 @@ const ListAs = () => {
 
       <div id="filter_part">
         <div className={filter.contain}>
-          {/* <h1>Shop Collections:</h1> */}
           <div className={filter.cat_head}>
             <div className=" bg-gray-100 h-fit">
               <button
                 type="button"
-                // className="btn btn-danger me-3 mb-3"
                 className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Description
               </button>
               <button
                 type="button"
-                // className="btn btn-danger me-3 mb-3"
                 className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Media
               </button>
               <button
                 type="button"
-                // className="btn btn-danger me-3 mb-3"
                 className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Location
               </button>
               <button
                 type="button"
-                // className="btn btn-danger me-3 mb-3"
                 className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Details
               </button>
               <button
                 type="button"
-                // className="btn btn-danger me-3 mb-3"
                 className={`${styles.btn_normal} ${filter.activeButton}`}
               >
                 Amenities

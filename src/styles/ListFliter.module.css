@@ -7,9 +7,6 @@
 }
 
 .contain button{
-    /* border: 1px solid #000; */
-    /* margin-right: 50px;
-    margin-bottom: 20px; */
     @apply mr-[90px];
 }
 
@@ -22,8 +19,6 @@
 }
 
 .contain button:hover{
-    /* @apply bg-[#703fbf] text-[#fff]; */
-    /* @apply bg-[#800080] text-[#fff]; */
     @apply bg-[#fff] text-blue-500;
     
 }
@@ -33,8 +28,6 @@
 }
 
 .activeButton{
-    /* background-color: #800080 !important; */
-    /* color: #fff; */
     @apply text-[#000];
 }
 
