@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import AppRoutes from "./DASHBOARD/Routes/DashBoardAppRoutes";
 import ListAs from "./components/ListAs/ListAs";
 import ListAsLandlord from "./components/ListAs/ListAsLandlord";
+import ListAsAgent from "./components/ListAs/ListAsAgent";
 import PageNotFound from "./pages/PageNotFound";
 
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/contactus" element={<Contact />} />
           <Route path="/list-as" element={<ListAs />} />
           <Route path="/list-as-landlord" element={<ListAsLandlord />} />
+          <Route path="/list-as-agent" element={<ListAsAgent />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>

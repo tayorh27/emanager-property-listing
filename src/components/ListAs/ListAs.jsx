@@ -15,6 +15,7 @@ const ListAs = () => {
   const navigate = useNavigate();
 
   const goToListAsLandlord = () => navigate("/list-as-landlord");
+  const goToListAsAgent = () => navigate("/list-as-agent");
   return (
     <div>
       <MainNav />
@@ -90,7 +91,9 @@ const ListAs = () => {
                 Enjoy enhanced visibility and efficiency when you list as an
                 agent on our platform
               </p>
-              <button className={styles.btn_normal}>List as Agent</button>
+              <button className={styles.btn_normal} onClick={goToListAsAgent}>
+                List as Agent
+              </button>
             </div>
           </div>
           <div className={listing.options_col}>
