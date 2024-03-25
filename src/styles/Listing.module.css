@@ -1,3 +1,8 @@
+.h3{
+    @apply text-[20px] text-[#222] font-semibold;
+    @apply pb-2;
+}
+
 /* Listing Hero part */
 .list_hero{
     background-image: url("../assets/img/testAssets/unsplash_MP0bgaS_d1c.webp");
@@ -14,6 +19,42 @@
 .list_hero h2, .list_hero p{
     @apply text-[#fff];
 }
+
+.options_row{
+    @apply flex justify-between items-center mt-12 mx-14 gap-28;
+}
+
+.options_col{
+    @apply flex flex-col m-auto;
+}
+
+.options_info img{
+    @apply w-fit m-auto;
+}
+
+.options_info h3{
+    @apply text-[#093C80] text-center mt-5;
+}
+
+.options_info p{
+    /* @apply text-[#163967] font-medium text-[13px] break-words; */
+    @apply text-gray-600 font-medium text-[13px] break-words;
+}
+
+.options_info button{
+    @apply bg-[#093C80] w-[100%] text-[#fff] my-5;
+}
+
+.options_info .btn_cos{
+    @apply bg-gray-200 w-[100%] text-gray-500 my-5;
+}
+
+
+
+.options_info button:hover{
+    @apply bg-blue-500 w-[100%] text-[#fff];
+}
+
 
 /* Pagination part */
 .pagination{

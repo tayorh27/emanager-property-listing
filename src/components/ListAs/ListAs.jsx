@@ -5,6 +5,11 @@ import styles from "../../styles/LandingP.module.css";
 import listing from "../../styles/Listing.module.css";
 import filter from "../../styles/ListFliter.module.css";
 
+//Import assets//
+import landlord from "../../assets/img/testAssets/Frame 1618868338.webp"
+import agent from "../../assets/img/testAssets/Frame 465.webp"
+import lawyer from "../../assets/img/testAssets/Frame 1618868338.webp"
+
 const ListAs = () => {
   return (
     <div>
@@ -60,6 +65,39 @@ const ListAs = () => {
             </div>
           </div>
           <hr></hr>
+        </div>
+      </div>
+
+      <span className="block w-[100%] text-center m-auto font-bold text-gray-600 text-[20px] mt-10">
+        Hello Precious
+      </span>
+
+      <div id="list_options_part">
+        <div className={listing.options_row}>
+            <div className={listing.options_col}>
+                <div className={listing.options_info}>
+                    <img src={landlord} alt="landlord/developer" />
+                    <h3 className={listing.h3}>Landlord/Developer</h3>
+                    <p>Enjoy enhanced visibility and efficiency when you list as a landlord on our platform</p>
+                    <button className={styles.btn_normal}>List as LandLord</button>
+                </div>
+            </div>
+            <div className={listing.options_col}>
+                <div className={listing.options_info}>
+                    <img src={agent} alt="landlord/developer" />
+                    <h3 className={listing.h3}>Agent</h3>
+                    <p>Enjoy enhanced visibility and efficiency when you list as an agent on our platform</p>
+                    <button className={styles.btn_normal}>List as Agent</button>
+                </div>
+            </div>
+            <div className={listing.options_col}>
+                <div className={listing.options_info}>
+                    <img src={lawyer} alt="landlord/developer" />
+                    <h3 className={listing.h3}>Real Estate Lawyer</h3>
+                    <p>Enjoy enhanced visibility and efficiency when you list as a lawyer on our platform</p>
+                    <button className={`${styles.btn_normal} ${listing.btn_cos}`}>Coming Soon...</button>
+                </div>
+            </div>
         </div>
       </div>
     </div>

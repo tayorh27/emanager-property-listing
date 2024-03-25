@@ -10,18 +10,17 @@
     @apply mr-[90px];
 }
 
-.contain hr {
+/* .contain hr {
     border: 1px solid #000;
-}
+} */
 
 .shop_section{
     padding: 0 80px 40px 80px;
 }
 
-.contain button:hover{
-    @apply bg-[#fff] text-blue-500;
-    
-}
+/* .contain button:hover{
+    @apply bg-[#fff] text-blue-500;  
+} */
 
 .cat_head{
     @apply flex justify-around items-center;
