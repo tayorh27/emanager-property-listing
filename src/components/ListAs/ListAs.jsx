@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import MainNav from "../MainNav";
 
 //Import styles//
@@ -6,11 +7,14 @@ import listing from "../../styles/Listing.module.css";
 import filter from "../../styles/ListFliter.module.css";
 
 //Import assets//
-import landlord from "../../assets/img/testAssets/Frame 1618868338.webp"
-import agent from "../../assets/img/testAssets/Frame 465.webp"
-import lawyer from "../../assets/img/testAssets/Frame 1618868338.webp"
+import landlord from "../../assets/img/testAssets/Frame 1618868338.webp";
+import agent from "../../assets/img/testAssets/Frame 465.webp";
+import lawyer from "../../assets/img/testAssets/Frame 1618868338.webp";
 
 const ListAs = () => {
+  const navigate = useNavigate();
+
+  const goToListAsLandlord = () => navigate("/list-as-landlord");
   return (
     <div>
       <MainNav />
@@ -38,28 +42,16 @@ const ListAs = () => {
               >
                 Description
               </button>
-              <button
-                type="button"
-                className={`${styles.btn_normal}`}
-              >
+              <button type="button" className={`${styles.btn_normal}`}>
                 Media
               </button>
-              <button
-                type="button"
-                className={`${styles.btn_normal}`}
-              >
+              <button type="button" className={`${styles.btn_normal}`}>
                 Location
               </button>
-              <button
-                type="button"
-                className={`${styles.btn_normal} `}
-              >
+              <button type="button" className={`${styles.btn_normal} `}>
                 Details
               </button>
-              <button
-                type="button"
-                className={`${styles.btn_normal}`}
-              >
+              <button type="button" className={`${styles.btn_normal}`}>
                 Amenities
               </button>
             </div>
@@ -74,30 +66,46 @@ const ListAs = () => {
 
       <div id="list_options_part">
         <div className={listing.options_row}>
-            <div className={listing.options_col}>
-                <div className={listing.options_info}>
-                    <img src={landlord} alt="landlord/developer" />
-                    <h3 className={listing.h3}>Landlord/Developer</h3>
-                    <p>Enjoy enhanced visibility and efficiency when you list as a landlord on our platform</p>
-                    <button className={styles.btn_normal}>List as LandLord</button>
-                </div>
+          <div className={listing.options_col}>
+            <div className={listing.options_info}>
+              <img src={landlord} alt="landlord/developer" />
+              <h3 className={listing.h3}>Landlord/Developer</h3>
+              <p>
+                Enjoy enhanced visibility and efficiency when you list as a
+                landlord on our platform
+              </p>
+              <button
+                className={styles.btn_normal}
+                onClick={goToListAsLandlord}
+              >
+                List as LandLord
+              </button>
             </div>
-            <div className={listing.options_col}>
-                <div className={listing.options_info}>
-                    <img src={agent} alt="landlord/developer" />
-                    <h3 className={listing.h3}>Agent</h3>
-                    <p>Enjoy enhanced visibility and efficiency when you list as an agent on our platform</p>
-                    <button className={styles.btn_normal}>List as Agent</button>
-                </div>
+          </div>
+          <div className={listing.options_col}>
+            <div className={listing.options_info}>
+              <img src={agent} alt="landlord/developer" />
+              <h3 className={listing.h3}>Agent</h3>
+              <p>
+                Enjoy enhanced visibility and efficiency when you list as an
+                agent on our platform
+              </p>
+              <button className={styles.btn_normal}>List as Agent</button>
             </div>
-            <div className={listing.options_col}>
-                <div className={listing.options_info}>
-                    <img src={lawyer} alt="landlord/developer" />
-                    <h3 className={listing.h3}>Real Estate Lawyer</h3>
-                    <p>Enjoy enhanced visibility and efficiency when you list as a lawyer on our platform</p>
-                    <button className={`${styles.btn_normal} ${listing.btn_cos}`}>Coming Soon...</button>
-                </div>
+          </div>
+          <div className={listing.options_col}>
+            <div className={listing.options_info}>
+              <img src={lawyer} alt="landlord/developer" />
+              <h3 className={listing.h3}>Real Estate Lawyer</h3>
+              <p>
+                Enjoy enhanced visibility and efficiency when you list as a
+                lawyer on our platform
+              </p>
+              <button className={`${styles.btn_normal} ${listing.btn_cos}`}>
+                Coming Soon...
+              </button>
             </div>
+          </div>
         </div>
       </div>
     </div>
