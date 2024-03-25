@@ -1,0 +1,50 @@
+.contain{
+    @apply container mt-5;
+}
+
+.contain h1 {
+    @apply text-[40px] leading-[64px] text-[#222] font-semibold text-center;
+}
+
+.contain button{
+    /* border: 1px solid #000; */
+    /* margin-right: 50px;
+    margin-bottom: 20px; */
+    @apply mr-[90px];
+}
+
+.contain hr {
+    border: 1px solid #000;
+}
+
+.shop_section{
+    padding: 0 80px 40px 80px;
+}
+
+.contain button:hover{
+    /* @apply bg-[#703fbf] text-[#fff]; */
+    /* @apply bg-[#800080] text-[#fff]; */
+    @apply bg-[#fff] text-blue-500;
+    
+}
+
+.cat_head{
+    @apply flex justify-around items-center;
+}
+
+.activeButton{
+    /* background-color: #800080 !important; */
+    /* color: #fff; */
+    @apply text-[#000];
+}
+
+@media (max-width: 425px) {
+    .section_p1{
+        padding: 20px;
+    }
+
+    .contain button{
+        @apply text-[10px];
+        
+    }
+}

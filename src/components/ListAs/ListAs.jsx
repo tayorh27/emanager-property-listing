@@ -3,6 +3,7 @@ import MainNav from "../MainNav";
 //Import styles//
 import styles from "../../styles/LandingP.module.css";
 import listing from "../../styles/Listing.module.css";
+import filter from "../../styles/ListFliter.module.css";
 
 const ListAs = () => {
   return (
@@ -16,6 +17,56 @@ const ListAs = () => {
           </h2>
           <p className={styles.p}>List your properties here!</p>
         </section>
+      </div>
+
+      <span className="block w-[100%] text-center m-auto font-bold text-gray-600 text-[25px] mt-4">
+        List your Property
+      </span>
+
+      <div id="filter_part">
+        <div className={filter.contain}>
+          {/* <h1>Shop Collections:</h1> */}
+          <div className={filter.cat_head}>
+            <div className=" bg-gray-100 h-fit">
+              <button
+                type="button"
+                // className="btn btn-danger me-3 mb-3"
+                className={`${styles.btn_normal} ${filter.activeButton}`}
+              >
+                Description
+              </button>
+              <button
+                type="button"
+                // className="btn btn-danger me-3 mb-3"
+                className={`${styles.btn_normal} ${filter.activeButton}`}
+              >
+                Media
+              </button>
+              <button
+                type="button"
+                // className="btn btn-danger me-3 mb-3"
+                className={`${styles.btn_normal} ${filter.activeButton}`}
+              >
+                Location
+              </button>
+              <button
+                type="button"
+                // className="btn btn-danger me-3 mb-3"
+                className={`${styles.btn_normal} ${filter.activeButton}`}
+              >
+                Details
+              </button>
+              <button
+                type="button"
+                // className="btn btn-danger me-3 mb-3"
+                className={`${styles.btn_normal} ${filter.activeButton}`}
+              >
+                Amenities
+              </button>
+            </div>
+          </div>
+          <hr></hr>
+        </div>
       </div>
     </div>
   );
