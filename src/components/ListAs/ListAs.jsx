@@ -16,10 +16,9 @@ const ListAs = () => {
 
   const goToListAsLandlord = () => navigate("/list-as-landlord");
   const goToListAsAgent = () => navigate("/list-as-agent");
+  
   return (
     <div>
-      <MainNav />
-
       <div id="shop_hero_part">
         <section id="shop_hero" className={listing.list_hero}>
           <h2 className={styles.h2}>
