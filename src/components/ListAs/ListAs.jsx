@@ -1,5 +1,11 @@
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import MainNav from "../MainNav";
+import logo from "../../assets/img/testAssets/Vector.webp";
+import { TiSocialTwitter } from "react-icons/ti";
+import { BiLogoInstagram } from "react-icons/bi";
+import { TiSocialFacebook } from "react-icons/ti";
+import { FaLinkedinIn } from "react-icons/fa";
 
 //Import styles//
 import styles from "../../styles/LandingP.module.css";
@@ -107,6 +113,61 @@ const ListAs = () => {
               <button className={`${styles.btn_normal} ${listing.btn_cos}`}>
                 Coming Soon...
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="listas_footer_part">
+        <div className={listing.footer}>
+          <div className={listing.footer_logo}>
+            <div className={` ${listing.logo}`}>
+              <Link to="/" className={styles.logoLink}>
+                <img src={logo} alt="logo" />
+              </Link>
+              <span className={listing.logoText}>E MANAGER</span>
+            </div>
+          </div>
+          <div className={listing.footer_navigation}>
+            <div>
+              <ul id="navbar" className={listing.navbar}>
+                <li id="active">
+                  <Link to="/about">About us</Link>
+                </li>
+                <li>
+                  <Link to="/terms-conditions">Terms & Conditions</Link>
+                </li>
+                <li>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link to="/faqs">FAQs</Link>
+                </li>
+                <li>
+                  <Link to="/contactus">Contact Us</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={listing.copy_links}>
+            <div className={listing.copyrights}>
+              &#169; 2023 E-Manager. All rights reserved.
+            </div>
+
+            <div className={listing.links}>
+              <div className={listing.link}>
+                <TiSocialTwitter />
+              </div>
+              <div className={listing.link}>
+                <BiLogoInstagram />
+              </div>
+              <div className={listing.link}>
+                <TiSocialFacebook />
+              </div>
+              <div className={listing.link}>
+                <FaLinkedinIn />
+              </div>
             </div>
           </div>
         </div>

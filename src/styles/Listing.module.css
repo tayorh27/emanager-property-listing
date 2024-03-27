@@ -21,7 +21,7 @@
 }
 
 .options_row{
-    @apply flex justify-between items-center mt-12 mx-14 gap-28;
+    @apply flex justify-between items-center mt-12 mx-14 gap-28 mb-40;
 }
 
 .options_col{
@@ -53,6 +53,38 @@
 
 .options_info button:hover{
     @apply bg-blue-500 w-[100%] text-[#fff];
+}
+
+.footer{
+    @apply bg-[#132B58] py-10;
+}
+
+.footer_logo{
+    @apply flex justify-center items-center; 
+}
+
+.footer_logo .logo{
+    @apply flex items-center text-[#554747] gap-1;
+    @apply text-blue-500;
+    @apply bg-white py-1 px-5 rounded-md mb-5;
+}
+.footer_logo .logoText{
+    @apply text-[12px] font-semibold;
+}
+
+.navbar{
+    @apply flex items-center justify-center;
+}
+
+ul li{
+    @apply py-0 px-5;
+    color: #fff;
+    @apply hover:text-blue-500;
+    position: relative;
+}
+
+ul .active{
+    @apply text-blue-500;
 }
 
 
