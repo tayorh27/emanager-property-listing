@@ -70,8 +70,8 @@ const MainFooter = () => {
         <div className="social-links flex gap-6 items-center flex-wrap">
           {socialLinks.map((link) => {
             return (
-              <Link to='' target='_blank' className='border px-2 py-2 rounded-[5px]' rel='noreferrer noopener'>
-                <span className='social text-[1rem]'>{link.icon}</span>
+              <Link key={link} to='' target='_blank' className='border px-2 py-2 rounded-[5px]' rel='noreferrer noopener'>
+                <span className='social text-[1rem] hover:text-[#132B58]'>{link.icon}</span>
               </Link>
             )
           })}
