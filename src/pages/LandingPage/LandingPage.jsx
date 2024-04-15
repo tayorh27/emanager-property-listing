@@ -6,12 +6,14 @@ import Header from './Header/Header';
 import Message from './Message';
 import Testimonial from './Testimonial/Testimonial';
 import Featured from './FeaturedProperties/Featured'
+import Benefits from './Benefits/Benefits'
 
 const LandingPage = () => {
   return (
     <>
       <Header/>
       <Featured/>
+      <Benefits/>
       <Testimonial/>
       <Faqs/>
       <Message/>
