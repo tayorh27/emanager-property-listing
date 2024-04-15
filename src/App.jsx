@@ -11,9 +11,8 @@ import ListAsLandlord from "./components/ListAs/ListAsLandlord";
 import ListAsAgent from "./components/ListAs/ListAsAgent";
 import PageNotFound from "./pages/PageNotFound";
 import MainNav from "./components/MainNav";
-import MainFooter from "./components/MainFooter";
+import MainFooter from "./components/Footer/MainFooter";
 import LandingPage from "./pages/LandingPage/LandingPage";
-
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
