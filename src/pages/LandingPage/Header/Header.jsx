@@ -6,6 +6,7 @@ import { FaRegMap } from "react-icons/fa6";
 import {FormControl, InputLabel, Select, Button, Icon} from '@material-ui/core/'
 import { makeStyles } from '@material-ui/core/styles'
 import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -99,8 +100,10 @@ const Header = () => {
             <button className='border rounded-[6px] font-[600] flex items-center gap-2 cursor-pointer px-3 py-2'>
               <FaRegMap /> Map
             </button>
-            <button className='rounded-[6px] hover:bg-white hover:text-[#547CC9] hover:border-[#547CC9] hover:border text-white px-3 py-2 bg-[#547CC9]'
-            >Search</button>
+            <Link to='/search-filter' 
+              className='rounded-[6px] hover:bg-white hover:text-[#547CC9] hover:border-[#547CC9] hover:border flex items-center text-white px-2 py-2 bg-[#547CC9]'>
+              Search
+            </Link>
           </div>
           <div className="down relative flex items-center gap-[1rem] mt-[0.5rem]">
             {Object.keys(dropdownOptions).map((item, index) => (

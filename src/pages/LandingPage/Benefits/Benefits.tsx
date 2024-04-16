@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaRegCircleCheck } from "react-icons/fa6";
-import { benefitText, searchText } from './Data';
+import { benefitText, searchText } from '../../../Lib/BenefitsData';
 import { TiTick } from "react-icons/ti";
 import benefit2 from '../../../assets/img/testAssets/benefit2.avif'
 import benefit3 from '../../../assets/img/testAssets/benefit3.avif'
