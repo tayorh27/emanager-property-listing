@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import SectionHeader from '../../../components/SectionHeader'
 import styled from 'styled-components'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { TestimonialData } from './data'
+import { TestimonialData } from '../../../Lib/TestimonialData'
 
 const Testimonial = () => {
   const [index, setIndex] = useState(0)

@@ -82,15 +82,15 @@
     @apply flex items-center justify-center;
 }
 
-ul li{
-    @apply py-0 px-5;
-    color: #525858;
-    @apply hover:text-blue-500;
-    position: relative;
-}
-
 ul .active{
     @apply text-blue-500;
+}
+
+ul li{
+    @apply py-0 px-5 text-[#525858];
+    /* color: #525858; */
+    @apply hover:text-blue-500;
+    position: relative;
 }
 
 .p_listing{
@@ -167,6 +167,7 @@ ul .active{
     .hamburger{
         display: block;
         align-items: center;
+        background: #E3E6F3;
     }
 
     .hamburger ul{

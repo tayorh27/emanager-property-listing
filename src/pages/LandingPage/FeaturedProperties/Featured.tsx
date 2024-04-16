@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import ReusableCard from '../../../UI/ReusableCard'
-import { Data } from '../../../components/CardData'
+import { Data } from '../../../Lib/CardData'
 
 const Featured = () => {
   return (

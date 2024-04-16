@@ -11,8 +11,9 @@ import ListAsLandlord from "./components/ListAs/ListAsLandlord";
 import ListAsAgent from "./components/ListAs/ListAsAgent";
 import PageNotFound from "./pages/PageNotFound";
 import MainNav from "./components/MainNav";
-import MainFooter from "./components/Footer/MainFooter";
+import MainFooter from "./components/MainFooter";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import SearchFilteredProperties from './pages/SearchFilter/SearchFilteredProperties'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ function App() {
           <Route path="/contactus" element={<Contact />} />
           <Route path="/list-as" element={<ListAs />} />
           <Route path="/list-as-landlord" element={<ListAsLandlord />} />
+          <Route path="/search-filter" element={<SearchFilteredProperties/>}/>
           <Route path="/list-as-agent" element={<ListAsAgent />} />
           <Route path="*" element={<Navigate replace to="/404" />}/>
           <Route path="/404" element={<PageNotFound/>} />

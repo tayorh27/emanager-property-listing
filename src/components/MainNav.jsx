@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 
 // Import styles
-import styles from "../styles/LandingP.module.css";
+import styles from '../styles/LandingP.module.css';
 
 const MainNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,16 +41,16 @@ const MainNav = () => {
               <li id="active" className={styles.active}>
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className="text-[#525858]">
                 <Link to="/ourpartners">Our Partners</Link>
               </li>
-              <li>
+              <li className="text-[#525858]">
                 <Link to="/faqs">FAQs</Link>
               </li>
-              <li>
+              <li className="text-[#525858]">
                 <Link to="/contactus">Contact Us</Link>
               </li>
-              <li className={styles.p_listing}>
+              <li className={`${styles.p_listing} text-[#525858]`}>
                 <button>Post a listing</button>
               </li>
             </ul>

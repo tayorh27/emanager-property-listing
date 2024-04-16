@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../../DASHBOARD/assets/dashlogo.png'
+import logo from '../DASHBOARD/assets/dashlogo.png'
 import { Link } from 'react-router-dom'
 import { IoLogoTwitter } from "react-icons/io5";
 import { AiFillInstagram } from "react-icons/ai";

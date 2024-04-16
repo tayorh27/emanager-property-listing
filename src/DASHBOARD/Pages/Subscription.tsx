@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react'
-import { SubscriptionData } from '../data'
+import { SubscriptionData } from '../Lib/data'
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 const Subscription = () => {
