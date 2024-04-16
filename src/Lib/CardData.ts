@@ -1,4 +1,4 @@
-interface PropertyType {
+export interface PropertyType {
   imgUrl : string
   apartmentType : string,
   price : number,
@@ -10,7 +10,7 @@ interface PropertyType {
   secondFeature : secondFeature[]
 }
 
-interface secondFeature {
+export interface secondFeature {
   address : string
   nameOfAgent : string
   addressJunction : string

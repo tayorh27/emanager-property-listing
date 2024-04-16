@@ -1,8 +1,8 @@
-import test1 from '../../../assets/img/testAssets/test1.jpg';
-import test2 from '../../../assets/img/testAssets/test2.jpeg';
-import test3 from '../../../assets/img/testAssets/test3.jpeg';
-import test4 from '../../../assets/img/testAssets/test4.jpeg';
-import test5 from '../../../assets/img/testAssets/test5.avif';
+import test1 from '../assets/img/testAssets/test1.jpg';
+import test2 from '../assets/img/testAssets/test2.jpeg';
+import test3 from '../assets/img/testAssets/test3.jpeg';
+import test4 from '../assets/img/testAssets/test4.jpeg';
+import test5 from '../assets/img/testAssets/test5.avif';
 
 export const TestimonialData = [
   {
