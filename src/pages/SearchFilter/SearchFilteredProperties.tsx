@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { FaNairaSign } from "react-icons/fa6";
 import { MdArrowDropUp } from "react-icons/md";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { FaHouseCircleCheck } from "react-icons/fa6";
+import Pagination from './Pagination';
 
 interface State {
   isNairaOpen: boolean;
@@ -19,7 +20,7 @@ const SearchFilteredProperties = () => {
   const [state , setState]  = useState<State>({
     isLeaseOpen : false,
     isNairaOpen : false,
-    isDuplexOpen : false
+    isDuplexOpen : false,
   })
 
   const clickDropdown = (param : string) => {
@@ -96,7 +97,7 @@ const SearchFilteredProperties = () => {
         </div>
       </div>
       <div className="card-section w-full">
-        hey
+        <Pagination/>
       </div>
     </FilterStyled>
   )
@@ -115,6 +116,8 @@ const FilterStyled = styled.section`
     grid-template-columns : 15% 25% 15% 15% 15%;
     padding : 2rem;
     gap: 1.5rem;
+    position : fixed;
+    z-index : 100;
 
     >div {
       position : relative;
@@ -137,6 +140,7 @@ const FilterStyled = styled.section`
 
   .card-section {
     padding : 2rem 8%;
+    margin-top : 6rem;
   }
 `
 
