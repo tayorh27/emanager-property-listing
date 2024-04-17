@@ -26,27 +26,32 @@ const ReusableCard = ({card}) => {
       {hoverState && 
       <div className='down'>
        <div className='mb-4'>
-        <span className='text-[#132B58] font-500 text-[1.2rem]'># {card.secondFeature[0].price}</span>
-        <h2 className='text-[0.8rem]'>Posted by {card.secondFeature[0].nameOfAgent}</h2>
+        <span className='text-[#132B58] font-500 text-[1.2rem]'>
+        # {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].price : 'N/A'}
+        </span>
+        <h2 className='text-[0.8rem]'>
+          Posted by 
+          {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].nameOfAgent : 'N/A'}
+          </h2>
        </div>
        <div className='flex items-start justify-between text-[#898D93] text-[0.8rem]'>
         <div className='flex items-center gap-3'>
           <IoLocationSharp className='text-[1.2rem]'/>
           <div className='flex flex-col gap-1'>
-            <span>{card.secondFeature[0].address},</span>
-            <span>{card.secondFeature[0].addressJunction}</span>
+            <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].address : "?"},</span>
+            <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].addressJunction : "?"}</span>
           </div>
         </div>
-          <span>{card.secondFeature[0].numGarage} garage</span>
+          <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].numGarage : '?'} garage</span>
        </div>
        <div className='flex mt-4 items-center justify-between text-[0.8rem] text-[#898D93]'>
         <div className='flex items-center gap-2'>
           <small><FaShower className='text-[1.2rem]'/></small>
-          <span>{card.secondFeature[0].numBath} Bathrooms</span>
+          <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].numBath : "?"} Bathrooms</span>
         </div>
         <div className='flex gap-2 items-center'>
           <small><TbBed className='text-[1.2rem]'/></small>
-          <span>{card.secondFeature[0].numBed} Bedroom</span>
+          <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].numBed : '?'} Bedroom</span>
         </div>
        </div>
       </div> }
@@ -101,6 +106,7 @@ const CardStyle = styled.div`
     img {
       border-top-right-radius : 1rem;
       border-top-left-radius : 1rem;
+      width : 100%;
     }
   }
 
