@@ -52,7 +52,7 @@ const dropdownOptions = {
   ]
 };
 
-const Header = () => {
+const Header = ({filterModal}) => {
   const classes = useStyles();
   const [activeBtn, setActiveBtn] = useState(null)
   const [state, setState] = React.useState({
@@ -125,7 +125,7 @@ const Header = () => {
               </FormControl>
             ))}
             <div className="btn cursor-pointer border mr-3 rounded-[8px] flex items-center justify-between px-2 py-2 w-[100%]">
-              <button className='text-[15px] text-grey'>
+              <button className='text-[15px] text-grey' onClick={filterModal}>
                 More Filters
               </button>
               <FaPlus/>

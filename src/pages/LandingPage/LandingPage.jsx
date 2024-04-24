@@ -7,11 +7,17 @@ import Message from './Message';
 import Testimonial from './Testimonial/Testimonial';
 import Featured from './FeaturedProperties/Featured'
 import Benefits from './Benefits/Benefits'
+import ReusableModal from '../../UI/ReusableModal/ReusableModal';
+import FilterModal from '../../components/MoreFilterModal/FilterModal';
 
-const LandingPage = () => {
+const LandingPage = ({openSignup, closeModal, openFilter, filterModal}) => {
   return (
     <>
-      <Header/>
+      {openSignup && <ReusableModal closeModal={closeModal}/>}
+      {openFilter && <ReusableModal closeModal={closeModal} 
+        content={<FilterModal closeModal={closeModal}/>}/>
+      }
+      <Header filterModal={filterModal}/>
       <Featured/>
       <Benefits/>
       <Testimonial/>

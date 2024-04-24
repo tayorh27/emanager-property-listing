@@ -11,7 +11,7 @@ import {
 // Import styles
 import styles from '../styles/LandingP.module.css';
 
-const MainNav = () => {
+const MainNav = ({SignUpModal}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -51,7 +51,7 @@ const MainNav = () => {
                 <Link to="/contactus">Contact Us</Link>
               </li>
               <li className={`${styles.p_listing} text-[#525858]`}>
-                <button>Post a listing</button>
+                <button onClick={SignUpModal}>Post a listing</button>
               </li>
             </ul>
           </div>

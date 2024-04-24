@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SectionHeader from '../../../components/SectionHeader'
+import SectionHeader from '../../../UI/SectionHeader'
 import styled from 'styled-components'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { TestimonialData } from '../../../Lib/TestimonialData'
