@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SectionHeader from '../../components/SectionHeader'
+import SectionHeader from '../../UI/SectionHeader'
 import { PiChatCircleTextFill } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 

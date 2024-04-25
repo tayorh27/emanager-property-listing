@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
-import SectionHeader from '../../../components/SectionHeader'
+import SectionHeader from '../../../UI/SectionHeader'
 import {FAQdata} from './FaqData'
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
@@ -59,6 +59,7 @@ const FaqStyle = styled.section`
   height : 100%;
   width : 100vw;
   padding : 4rem 10%;
+  margin-top : 2rem;
 
   .main {
     margin : 0 auto;

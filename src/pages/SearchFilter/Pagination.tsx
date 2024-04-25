@@ -12,7 +12,6 @@ const Pagination = () => {
   const firstPostIndex : number = landPostIndex - postsPerPage;
   const currentPosts : any[] = PaginationData.slice(firstPostIndex, landPostIndex)
   const totalPosts = PaginationData.length
-  console.log(currentPosts)
   
   return (
     <PaginationStyle>

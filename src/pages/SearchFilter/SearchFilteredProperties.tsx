@@ -16,7 +16,7 @@ interface Action {
   clickDropdown : (param : string) => void
 }
 
-const SearchFilteredProperties = () => {
+const SearchFilteredProperties = ({filterModal}) => {
   const [state , setState]  = useState<State>({
     isLeaseOpen : false,
     isNairaOpen : false,
@@ -93,7 +93,11 @@ const SearchFilteredProperties = () => {
           </button>
         </div>
         <div className='filter'>
-          <button className='w-full relative p-2 rounded-[10px] font-bold hover:border text-[#545098] transition-all hover:border-[#545098]'>MORE FILTERS</button>
+          <button
+          onClick={filterModal} 
+          className='w-full relative p-2 rounded-[10px] font-bold hover:border text-[#545098] transition-all hover:border-[#545098]'>
+            MORE FILTERS
+            </button>
         </div>
       </div>
       <div className="card-section w-full">

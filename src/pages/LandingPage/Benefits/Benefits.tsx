@@ -53,7 +53,7 @@ const Searching = () => {
         </div>
         <img className='img1 relative h-[50%] z-100 w-[45%] mt-[10%] rounded-[9px]' src={benefit1} alt="" />
       </div>
-      <div className="right w-[50%] border">
+      <div className="right w-[50%]">
         <small className='text-[#547CC9] font-500 text-[1rem]'>Benefits</small> 
         <h1 className='text-[3rem] font-[500]'>Searching For A Property?</h1>
         <h4 className='text-[#41451B] font-[300] text-[1.2rem]'>E-manager offers numerous benefits for you:</h4>
