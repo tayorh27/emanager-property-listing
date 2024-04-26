@@ -9,7 +9,7 @@ const Featured = () => {
     <FeaturedStyle>
       <div className="top flex items-center justify-between">
         <h2 className='text-[2rem] font-[500] text-[#08090B]'>Featured Properties</h2>
-        <Link to="/see-all" className='text-[1.2rem] text-[#547CC9]'>
+        <Link to="/search-filter" className='text-[1.2rem] text-[#547CC9]'>
           See all
         </Link>
       </div>

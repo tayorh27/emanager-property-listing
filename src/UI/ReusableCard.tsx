@@ -6,6 +6,7 @@ import { TbBed } from "react-icons/tb";
 import { GiHomeGarage } from "react-icons/gi";
 import { IoLocationSharp } from "react-icons/io5";
 import img from '../assets/img/testAssets/featured.png'
+import { useNavigate } from 'react-router-dom';
 
 const ReusableCard = ({card}) => {
   const [hoverState, setHoverState] = useState(false)
@@ -17,9 +18,15 @@ const ReusableCard = ({card}) => {
   const handleMouseLeave = () => {
     setHoverState(false);
   };
+  const navigate = useNavigate()
+  const propertyId = card.id
+  console.log(propertyId)
+  const handleClick = () => {
+    navigate(`/products/${propertyId}`)
+  }
 
   return (
-    <CardStyle onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>
+    <CardStyle onMouseOver={handleHover} onMouseLeave={handleMouseLeave} onClick={handleClick}>
       <div className="up flex">
         <img src={img} alt="" />
       </div>
@@ -77,7 +84,7 @@ const ReusableCard = ({card}) => {
               <small className='flex gap-1 items-center text-[1rem]'>{card.numGarage} <span className='text-[#898D93] text-[0.7rem]'>garage</span></small>
             </span>
           </div>
-          <span className='flex items-center text-[#6C7076] flex gap-2 mt-1'><IoLocationSharp/> {card.location}</span>
+          <span className='flex items-center text-[#6C7076] gap-2 mt-1'><IoLocationSharp/> {card.location}</span>
           <div className="low h-[1rem] flex gap-3 items-center text-[#D3D4D7] font-500 mt-2">
             <img src={img} alt="" className='img-thumbnail'/>
             <small>Posted by {card.nameOfAgent}</small>
