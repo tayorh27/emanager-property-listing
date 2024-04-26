@@ -1,11 +1,29 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Data } from "../../../Lib/CardData";
+import { FaLocationDot } from "react-icons/fa6";
+import propertyImg  from "../../../assets/img/testAssets/residence.png";
 
 export default function PropertyDetails() {
-    const {productId} = useParams()
-    return <div>
-        <span className="w-screen h-screen flex items-center justify-center text-center">
-            <span>Hello World</span>
-        </span>
-  </div>;
+  const { productId } = useParams();
+  const filteredProducts = Data.filter((product) => product.id === productId);
+
+  return (
+    <div className="bg-white pt-[100px] px-[97px]">
+      <p className="text-[40px] font-[600]">Luxury Five-Bedroom Apartment </p>
+      <p className="flex gap-[16px] text-[20px] font-[400] items-center mb-8">
+        <FaLocationDot /> Luxury Five-Bedroom Apartment{" "}
+      </p>
+      <div className="flex bg-[#F6F8F9] text-[16px] font-[500] items-center justify-around">
+        <span className="p-[24px]">Overview</span>
+        <span className="p-[24px]">Features</span>
+        <span className="p-[24px]">Media</span>
+        <span className="p-[24px]">Area Guide</span>
+          </div>
+          
+          <div className="w-full">
+              <img src={propertyImg} alt="" className="w-full h-full" />
+          </div>
+    </div>
+  );
 }
