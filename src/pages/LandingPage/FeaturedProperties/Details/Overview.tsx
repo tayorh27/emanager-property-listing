@@ -297,8 +297,11 @@ export default function Overview() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-[16px">
-        
+      <div className="flex flex-col gap-[16px] text-[16px] font-[700]">
+        <div className="flex flex-col gap-[8px]">
+          <span className="font-[700]"></span>
+          <span></span>
+        </div>
       </div>
     </div>
   );
