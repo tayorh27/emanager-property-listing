@@ -47,11 +47,11 @@ export default function Overview() {
               experience.
             </span>
             <div className="flex flex-wrap gap-[20px] mt-[12px]">
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[400px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-fit pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Property ID:</span>
                 <span>{filteredProducts[0].secondFeature[0].property}</span>
               </div>
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-fit pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Address:</span>
                 <span>
                   {filteredProducts[0].address}
@@ -59,28 +59,34 @@ export default function Overview() {
                   {filteredProducts[0].location}
                 </span>
               </div>
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-fit pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Build Year:</span>
                 <span>
                   {filteredProducts[0].secondFeature[0].buildDate.getFullYear()}
                 </span>
               </div>
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-fit pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">No of Units Available</span>
-                <span>
-                  {filteredProducts[0].secondFeature[0].numUnits}
-                </span>
+                <span>{filteredProducts[0].secondFeature[0].numUnits}</span>
               </div>
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-fit pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Available From</span>
                 <span>
                   {filteredProducts[0].secondFeature[0].buildDate.getFullYear()}
                 </span>
               </div>
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-fit pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
+                <span className="font-[700]">Nearest Bus Stop</span>
+                <span>{filteredProducts[0].nearestBusStop}</span>
+              </div>
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-full pr-40 flex items-center gap-[10px] text-[16px] font-[400]">
+                <span className="font-[700]">Available Documents</span>
+                <span>null</span>
+              </div>
             </div>
           </div>
           <div className="flex">
-            <div className="bg-[#F6F8F9] py-[27px] px-[39px] w-[255px] h-[349px]">
+            <div className="bg-[#F6F8F9] py-[27px] px-[39px] w-[255px] h-[349px] shadow-2xl hover:skew-y-12 transition-all duration-500">
               <img src={agentphoto} alt="" />
               <div className="flex flex-col items-center justify-center text-center text-[11px] font-[400] text-[#141B2D]">
                 <span className="text-[#091638] text-[14px] font-[700]">
