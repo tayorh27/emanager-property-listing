@@ -13,6 +13,7 @@ const duplicatedData = Array.from({ length: 600 }).map((_, i) => {
     nearestBusStop: originalData[0].nearestBusStop,
     address: originalData[0].address,
     secondFeature: [originalData[0].secondFeature[0]],
+    ammenities: [originalData[0].ammenities]
   };
 });
 
