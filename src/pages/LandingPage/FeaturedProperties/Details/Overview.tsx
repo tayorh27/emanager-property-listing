@@ -136,7 +136,11 @@ export default function Overview() {
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.allEnsuiteBedroom === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.allEnsuiteBedroom === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>All Ensuited Bedrooms</span>
           </div>{" "}
@@ -154,7 +158,11 @@ export default function Overview() {
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.familyLounge === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.familyLounge === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Family Lounge</span>
           </div>{" "}
@@ -166,13 +174,21 @@ export default function Overview() {
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.parkingSpace === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.parkingSpace === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Parking Space</span>
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.gateHouse === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.gateHouse === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Gate House</span>
           </div>{" "}
@@ -211,7 +227,13 @@ export default function Overview() {
               {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
             <span>Security</span>
-          </div>v
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
           <div className="flex items-center gap-[10px]">
             <span>
               {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
