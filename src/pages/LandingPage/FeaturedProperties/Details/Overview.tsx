@@ -334,6 +334,11 @@ export default function Overview() {
             voluptas aperiam facilis molestias ipsa?
           </span>
         </div>
+        <span className="underline text-[#1C3988]">
+          <a href="" target="_blank">
+            find out more about this area
+          </a>
+        </span>
       </div>
     </div>
   );
