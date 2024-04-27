@@ -34,7 +34,7 @@ const ReusableCard = ({card}) => {
       <div className='down'>
        <div className='mb-4'>
         <span className='text-[#132B58] font-500 text-[1.2rem]'>
-        # {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].price : 'N/A'}
+        # {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].property : 'N/A'}
         </span>
         <h2 className='text-[0.8rem]'>
           Posted by 

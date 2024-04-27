@@ -17,7 +17,7 @@ export interface secondFeature {
   numBath : number,
   numBed : number,
   numGarage : number
-  price : number,
+  property : number,
 }
 
 export const Data : PropertyType[] = [
@@ -38,7 +38,7 @@ export const Data : PropertyType[] = [
         numBath : 3,
         numBed : 10,
         numGarage : 2,
-        price : 40545
+        property : 40545
       }
     ]
   }

@@ -11,7 +11,7 @@ export default function Overview() {
   const filteredProducts = PaginationData.filter(
     (product) => product.id = productId
   )
-  console.log(filteredProducts[0].nameOfAgent);
+  console.log(filteredProducts[0].secondFeature[0].property);
   
   return (
     <div className="flex flex-col w-full">
@@ -47,9 +47,9 @@ export default function Overview() {
               experience.
             </span>
             <div className="flex flex-wrap">
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] pr-[30px] flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Property ID:</span>
-                <span>44272</span>
+                <span>{filteredProducts[0].secondFeature[0].property}</span>
               </div>
             </div>
           </div>
