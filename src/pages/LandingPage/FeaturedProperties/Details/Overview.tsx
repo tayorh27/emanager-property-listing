@@ -10,13 +10,9 @@ export default function Overview() {
   const { productId } = useParams();
   const filteredProducts = PaginationData.filter(
     (product) => product.id = productId
-  );
-  console.log(filteredProducts[0].apartmentType);
+  )
+  console.log(filteredProducts[0].nameOfAgent);
   
-  
-  
-  
-
   return (
     <div className="flex flex-col w-full">
       <img src={propertyImg} alt="" className="w-full h-full" />
@@ -62,7 +58,7 @@ export default function Overview() {
               <img src={agentphoto} alt="" />
               <div className="flex flex-col items-center justify-center text-center text-[11px] font-[400] text-[#141B2D]">
                 <span className="text-[#091638] text-[14px] font-[700]">
-                  Kohinoor Kareem
+                  {filteredProducts[0].nameOfAgent}
                 </span>
                 <span>
                   <a href="tel:+2341234567890">+2341234567890</a>
