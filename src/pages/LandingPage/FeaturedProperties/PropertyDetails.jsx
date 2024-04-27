@@ -10,8 +10,8 @@ import Media from "./Details/Media";
 export default function PropertyDetails() {
   const { productId } = useParams();
   const [productInner, setProductInner] = useState("overview");
-  const filteredProducts = PaginationData.filter((product) => product.id === productId);
-  console.log(filteredProducts);
+  const filteredProducts = PaginationData.filter((product) => product.id == productId);
+  console.log(filteredProducts.apartmentType);
   const handleInnerProduct = (selection) => {
     setProductInner(selection);
   };

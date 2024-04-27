@@ -26,6 +26,7 @@ const ReusableCard = ({card}) => {
 
   return (
     <CardStyle onMouseOver={handleHover} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+      <p>{propertyId}</p>
       <div className="up flex">
         <img src={img} alt="" />
       </div>
