@@ -23,11 +23,11 @@ export default function Overview() {
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
           <img src={buildingicon} alt="" />
-          {filteredProducts[0].numBed} beds
+          {filteredProducts[0].secondFeature[0].numBed} beds
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
           <img src={buildingicon} alt="" />
-          {filteredProducts[0].numBath} baths
+          {filteredProducts[0].secondFeature[0].numBath} baths
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
           <img src={dimensionsicon} alt="" />
@@ -47,13 +47,13 @@ export default function Overview() {
               experience.
             </span>
             <div className="flex flex-wrap gap-[16px]">
-              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[400px] flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Property ID:</span>
                 <span>{filteredProducts[0].secondFeature[0].property}</span>
               </div>
               <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
-                <span className="font-[700]">Property ID:</span>
-                <span>{filteredProducts[0].secondFeature[0].property}</span>
+                <span className="font-[700]">Address:</span>
+                <span>{filteredProducts[0].address}{", "}{filteredProducts[0].location}</span>
               </div>
               <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Property ID:</span>

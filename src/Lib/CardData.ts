@@ -4,7 +4,7 @@ export interface PropertyType {
   price : number,
   location : string,
   nameOfAgent : string
-  addressJunction : string,
+  nearestBusStop : string,
   address : string,
   secondFeature : secondFeature[]
 }
@@ -14,7 +14,8 @@ export interface secondFeature {
   numBath : number,
   numBed : number,
   numGarage : number
-  property : number,
+  property: number,
+  buildYear: number,
 }
 
 export const Data : PropertyType[] = [
@@ -24,7 +25,7 @@ export const Data : PropertyType[] = [
     price : 800000,
     address : "209B Allen Jaja Street",
     location : 'Ikeja, Lagos',
-    addressJunction : "Lagos Junction",
+    nearestBusStop : "Lagos Junction",
     nameOfAgent : "Simeone",
     secondFeature : [
       {
@@ -32,7 +33,8 @@ export const Data : PropertyType[] = [
         numBath : 3,
         numBed : 10,
         numGarage : 2,
-        property : 40545,
+        property: 40545,
+        buildYear: 2012,
       }
     ]
   }

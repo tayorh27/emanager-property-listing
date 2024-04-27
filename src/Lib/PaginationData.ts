@@ -8,11 +8,10 @@ const duplicatedData = Array.from({ length: 600 }).map((_, i) => {
     imgUrl: originalData[0].imgUrl,
     apartmentType: originalData[0].apartmentType,
     price: originalData[0].price,
-    numBath: originalData[0].numBath,
-    numBed: originalData[0].numBed,
-    numGarage: originalData[0].numGarage,
     nameOfAgent: originalData[0].nameOfAgent,
     location: originalData[0].location,
+    nearestBusStop: originalData[0].nearestBusStop,
+    address: originalData[0].address,
     secondFeature: [originalData[0].secondFeature[0]],
   };
 });
