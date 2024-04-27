@@ -20,7 +20,6 @@ const ReusableCard = ({card}) => {
   };
   const navigate = useNavigate()
   const propertyId = card.id
-  console.log(propertyId)
   const handleClick = () => {
     navigate(`/products/${propertyId}`)
   }
