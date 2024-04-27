@@ -148,39 +148,39 @@ export default function Overview() {
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.water === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>AC</span>
+            <span>Water</span>
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.familyLounge === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>AC</span>
+            <span>Family Lounge</span>
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.fenced === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>AC</span>
+            <span>Fence</span>
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.parkingSpace === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>AC</span>
+            <span>Parking Space</span>
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.gateHouse === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>AC</span>
+            <span>Gate House</span>
           </div>{" "}
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>AC</span>
+            <span>Security</span>
           </div>
         </div>
       </div>
