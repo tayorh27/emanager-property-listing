@@ -182,6 +182,54 @@ export default function Overview() {
             </span>
             <span>Security</span>
           </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>v
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Security</span>
+          </div>
         </div>
       </div>
     </div>
