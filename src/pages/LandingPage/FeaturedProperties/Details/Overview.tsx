@@ -11,7 +11,7 @@ export default function Overview() {
   const filteredProducts = PaginationData.filter(
     (product) => product.id = productId
   )
-  console.log(filteredProducts[0]);
+  console.log(filteredProducts[0].ammenities[0].CCTV);
   
   return (
     <div className="flex flex-col w-full">
@@ -36,7 +36,7 @@ export default function Overview() {
           </span>
         </span>
       </div>
-      <div className="pt-12">
+      <div className="py-12">
         <div className="flex gap-[30px]">
           <div className="flex flex-col gap-[16px]">
             <span className="font-[600] text-[24px]">Overview</span>
@@ -106,6 +106,12 @@ export default function Overview() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col py-12 text-[14px] font-[400]">
+        <span className="font-[700] text-[24px] text-[#41454B]">Features</span>
+        <div className="grid grid-cols-3 gap-[24px]">
+
         </div>
       </div>
     </div>

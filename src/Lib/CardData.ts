@@ -73,7 +73,16 @@ export const Data: PropertyType[] = [
         fenced: true,
         parkingSpace: true,
         gateHouse: true,
-
+        security: true,
+        gym: false,
+        jacuzzi: false,
+        tarredRoads: true,
+        oceanView: false,
+        kitchenStorage: true,
+        walkInCloset: true,
+        exteriorLight: true,
+        goodDrainage: true,
+        swimmingPool: false,
       }
     ],
   },
