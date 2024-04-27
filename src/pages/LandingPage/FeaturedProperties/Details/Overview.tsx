@@ -2,6 +2,7 @@ import React from "react";
 import propertyImg from "../../../../assets/img/testAssets/residence.png";
 import buildingicon from "../../../../assets/img/testAssets/building.png";
 import dimensionsicon from "../../../../assets/img/testAssets/dimensions.png";
+import agentphoto from "../../../../assets/img/testAssets/agentphoto.png";
 import { useParams } from "react-router-dom";
 
 export default function Overview() {
@@ -18,8 +19,7 @@ export default function Overview() {
           <img src={buildingicon} alt="" />4 beds
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
-        <img src={buildingicon} alt="" />
-          3 baths
+          <img src={buildingicon} alt="" />3 baths
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
           <img src={dimensionsicon} alt="" />
@@ -27,6 +27,27 @@ export default function Overview() {
             224m<sup>2</sup> per room
           </span>
         </span>
+      </div>
+      <div className="pt-12">
+        <div className="flex">
+          <div className="flex flex-col">
+            <span className="font-[600] text-[24px]">Overview</span>
+            <span className="font-[400] text-[20px]">
+              Discover the allure of this exquisite 3-bedroom flat, situated in
+              a prime location in Lagos. With a modern and elegant design,this
+              spacious flat offers a comfortable and luxurious living
+              experience.
+            </span>
+          </div>
+          <div className="flex">
+            <div className="bg-[#F6F8F9] py-[27px] px-[39px] w-[255px] h-[349px]">
+              <img src={agentphoto} alt="" />
+              <div className="flex flex-col items-center justify-center text-center">
+                <span className="text-[#091638] text-[14px] font-[700]">Kohinoor Kareem</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
