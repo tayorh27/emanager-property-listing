@@ -4,28 +4,31 @@ import buildingicon from "../../../../assets/img/testAssets/building.png";
 import dimensionsicon from "../../../../assets/img/testAssets/dimensions.png";
 import agentphoto from "../../../../assets/img/testAssets/agentphoto.png";
 import { Link, useParams } from "react-router-dom";
-import {PaginationData} from "../../../../Lib/PaginationData"
+import { PaginationData } from "../../../../Lib/PaginationData";
 import { GiAbstract055, GiCheckMark, GiCrossMark } from "react-icons/gi";
-import {FaGreaterThan, FaLessThan} from "react-icons/fa"
+import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 
 export default function Overview() {
   const { productId } = useParams();
   const filteredProducts = PaginationData.filter(
-    (product) => product.id = productId
-  )
+    (product) => (product.id = productId)
+  );
   const ammenities = filteredProducts[0].ammenities[0];
   console.log(ammenities.CCTV);
 
-  
-
-  
   return (
     <div className="flex flex-col w-full">
       <img src={propertyImg} alt="" className="w-full h-full" />
-
       <div className="relative w-full p-2 my-1 h-full">
-        <button className="absolute top-1/3 left-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400" disabled><FaLessThan /></button>
-        <button className="absolute top-1/3 right-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400"><FaGreaterThan /></button>
+        <button
+          className="absolute top-1/3 left-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400"
+          disabled
+        >
+          <FaLessThan />
+        </button>
+        <button className="absolute top-1/3 right-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400">
+          <FaGreaterThan />
+        </button>
         <div className="flex items-center justify-center gap-6 h-full w-full">
           <img src={propertyImg} className="w-56" alt="" />
           <img src={propertyImg} className="w-56" alt="" />
@@ -34,7 +37,6 @@ export default function Overview() {
           <img src={propertyImg} className="w-56" alt="" />
         </div>
       </div>
-
       <div className="flex items-center justify-between w-full text-[20px]">
         <span className="flex w-full items-center text-center justify-center text-[40px] font-[600]">
           N{filteredProducts[0].price}
@@ -294,6 +296,9 @@ export default function Overview() {
             <span>Swimming Pool</span>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col gap-[16px">
+        
       </div>
     </div>
   );
