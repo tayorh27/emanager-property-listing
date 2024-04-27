@@ -11,7 +11,7 @@ export default function Overview() {
   const filteredProducts = PaginationData.filter(
     (product) => product.id = productId
   )
-  console.log(filteredProducts[0].secondFeature[0]);
+  console.log(filteredProducts[0]);
   
   return (
     <div className="flex flex-col w-full">
