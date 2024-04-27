@@ -316,6 +316,15 @@ export default function Overview() {
             voluptas aperiam facilis molestias ipsa?
           </span>
         </div>
+        <div className="flex flex-col gap-[8px]">
+          <span className="font-[700]">Title</span>
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            possimus repellat maiores quas earum! Tenetur labore consequuntur
+            error repellendus mollitia debitis nihil fuga. Asperiores, dolor
+            voluptas aperiam facilis molestias ipsa?
+          </span>
+        </div>
       </div>
     </div>
   );
