@@ -37,16 +37,16 @@ const ReusableCard = ({card}) => {
         # {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].property : 'N/A'}
         </span>
         <h2 className='text-[0.8rem]'>
-          Posted by 
-          {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].nameOfAgent : 'N/A'}
+          Posted by{" "}
+          {card.nameOfAgent}
           </h2>
        </div>
        <div className='flex items-start justify-between text-[#898D93] text-[0.8rem]'>
         <div className='flex items-center gap-3'>
           <IoLocationSharp className='text-[1.2rem]'/>
           <div className='flex flex-col gap-1'>
-            <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].address : "?"},</span>
-            <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].addressJunction : "?"}</span>
+            <span>{card.address},</span>
+            <span>{card.nearestBusStop}</span>
           </div>
         </div>
           <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].numGarage : '?'} garage</span>

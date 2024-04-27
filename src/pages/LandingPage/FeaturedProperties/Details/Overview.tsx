@@ -200,33 +200,33 @@ export default function Overview() {
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.gym === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Gym</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.jacuzzi === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Jacuzzi</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.tarredRoads === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Tarred Roads</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.oceanView === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Ocean View</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.kitchenStorage === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Kitchen Storage</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
