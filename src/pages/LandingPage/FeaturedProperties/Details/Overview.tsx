@@ -5,7 +5,8 @@ import dimensionsicon from "../../../../assets/img/testAssets/dimensions.png";
 import agentphoto from "../../../../assets/img/testAssets/agentphoto.png";
 import { Link, useParams } from "react-router-dom";
 import {PaginationData} from "../../../../Lib/PaginationData"
-import { GiCheckMark, GiCrossMark } from "react-icons/gi";
+import { GiAbstract055, GiCheckMark, GiCrossMark } from "react-icons/gi";
+import {FaGreaterThan, FaLessThan} from "react-icons/fa"
 
 export default function Overview() {
   const { productId } = useParams();
@@ -21,8 +22,18 @@ export default function Overview() {
   return (
     <div className="flex flex-col w-full">
       <img src={propertyImg} alt="" className="w-full h-full" />
-      
-      
+
+      <div className="relative w-full p-2 my-1 h-full">
+        <button className="absolute top-1/3 left-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400" disabled><FaLessThan /></button>
+        <button className="absolute top-1/3 right-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center"><FaGreaterThan /></button>
+        <div className="flex items-center justify-center gap-6 h-full w-full">
+          <img src={propertyImg} className="w-56" alt="" />
+          <img src={propertyImg} className="w-56" alt="" />
+          <img src={propertyImg} className="w-56" alt="" />
+          <img src={propertyImg} className="w-56" alt="" />
+          <img src={propertyImg} className="w-56" alt="" />
+        </div>
+      </div>
 
       <div className="flex items-center justify-between w-full text-[20px]">
         <span className="flex w-full items-center text-center justify-center text-[40px] font-[600]">
@@ -214,49 +225,76 @@ export default function Overview() {
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.tarredRoads === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.tarredRoads === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Tarred Roads</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.oceanView === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.oceanView === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Ocean View</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.kitchenStorage === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.kitchenStorage === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Kitchen Storage</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.walkInCloset === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.walkInCloset === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Walk in Closet</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.exteriorLight === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.exteriorLight === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Exterior Light</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.goodDrainage === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.goodDrainage === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Good Drainage</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.swimmingPool === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.swimmingPool === true ? (
+                <GiCheckMark />
+              ) : (
+                <GiCrossMark />
+              )}
             </span>
             <span>Swimming Pool</span>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
