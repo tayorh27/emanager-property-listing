@@ -21,7 +21,9 @@ export default function Overview() {
   return (
     <div className="flex flex-col w-full">
       <img src={propertyImg} alt="" className="w-full h-full" />
-      Carousel
+      
+      
+
       <div className="flex items-center justify-between w-full text-[20px]">
         <span className="flex w-full items-center text-center justify-center text-[40px] font-[600]">
           N{filteredProducts[0].price}
@@ -254,6 +256,7 @@ export default function Overview() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
