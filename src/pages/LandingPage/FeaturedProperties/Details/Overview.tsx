@@ -12,10 +12,11 @@ export default function Overview() {
   const filteredProducts = PaginationData.filter(
     (product) => product.id = productId
   )
-  console.log(filteredProducts[0].ammenities[0]);
-const ammenitiestext = filteredProducts[0].ammenities[0].map((amenity, index) =>
-  amenity ? <GiCheckMark key={index} /> : <GiCrossMark key={index} />
-);
+  const ammenities = filteredProducts[0].ammenities[0];
+  console.log(ammenities.CCTV);
+
+  
+
   
   return (
     <div className="flex flex-col w-full">
@@ -115,8 +116,71 @@ const ammenitiestext = filteredProducts[0].ammenities[0].map((amenity, index) =>
       <div className="flex flex-col py-12 text-[14px] font-[400]">
         <span className="font-[700] text-[24px] text-[#41454B]">Features</span>
         <div className="grid grid-cols-3 gap-[24px]">
-          <div className="flex">
-            ammenitiestext CCTV
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.CCTV === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>CCTV</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.backYard === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Back Yard</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.allEnsuiteBedroom === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>All Ensuited Bedrooms</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.balcony === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>Balcony</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
+          </div>{" "}
+          <div className="flex items-center gap-[10px]">
+            <span>
+              {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
+            </span>
+            <span>AC</span>
           </div>
         </div>
       </div>
