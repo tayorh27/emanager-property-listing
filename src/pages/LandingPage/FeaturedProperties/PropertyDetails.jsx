@@ -11,16 +11,18 @@ export default function PropertyDetails() {
   const { productId } = useParams();
   const [productInner, setProductInner] = useState("overview");
   const filteredProducts = PaginationData.filter((product) => product.id == productId);
-  console.log(filteredProducts.apartmentType);
   const handleInnerProduct = (selection) => {
     setProductInner(selection);
   };
 
   return (
     <div className="bg-white pt-[100px] px-[97px]">
-      <p className="text-[40px] font-[600]"> </p>
+      <p className="text-[40px] font-[600]">
+        {" "}
+        {filteredProducts[0].apartmentType}
+      </p>
       <p className="flex gap-[16px] text-[20px] font-[400] items-center mb-8">
-        <FaLocationDot /> {filteredProducts.apartmentType}
+        <FaLocationDot /> {filteredProducts[0].apartmentType}
       </p>
       <div className="flex bg-[#F6F8F9] text-[16px] font-[500] items-center justify-between w-[full]">
         <span

@@ -8,7 +8,10 @@ import {PaginationData} from "../../../../Lib/PaginationData"
 
 export default function Overview() {
   const { productId } = useParams();
-  const filterProperty = PaginationData.filter((property) => property.id === productId)
+  const filteredProducts = PaginationData.filter(
+    (product) => product.id = productId
+  );
+  console.log(filteredProducts[0].apartmentType);
   
   
   
@@ -23,10 +26,12 @@ export default function Overview() {
           N1,000,000
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
-          <img src={buildingicon} alt="" />4 beds
+          <img src={buildingicon} alt="" />
+          {filteredProducts[0].numBed} beds
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
-          <img src={buildingicon} alt="" />3 baths
+          <img src={buildingicon} alt="" />
+          {filteredProducts[0].numBath} baths
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
           <img src={dimensionsicon} alt="" />
