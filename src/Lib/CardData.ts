@@ -15,27 +15,27 @@ export interface secondFeature {
   numBed : number,
   numGarage : number
   property: number,
-  buildYear: number,
+  buildDate: Date,
 }
 
-export const Data : PropertyType[] = [
+export const Data: PropertyType[] = [
   {
-    imgUrl : '../assets/img/testAssets/featured.png',
-    apartmentType : "3 Bedroom Detached Duplex",
-    price : 800000,
-    address : "209B Allen Jaja Street",
-    location : 'Ikeja, Lagos',
-    nearestBusStop : "Lagos Junction",
-    nameOfAgent : "Simeone",
-    secondFeature : [
+    imgUrl: "../assets/img/testAssets/featured.png",
+    apartmentType: "3 Bedroom Detached Duplex",
+    price: 800000,
+    address: "209B Allen Jaja Street",
+    location: "Ikeja, Lagos",
+    nearestBusStop: "Lagos Junction",
+    nameOfAgent: "Simeone",
+    secondFeature: [
       {
         numUnits: 23,
-        numBath : 3,
-        numBed : 10,
-        numGarage : 2,
+        numBath: 3,
+        numBed: 10,
+        numGarage: 2,
         property: 40545,
-        buildYear: 2012,
-      }
-    ]
-  }
-]
+        buildDate: new Date(2012, 9, 11),
+      },
+    ],
+  },
+];

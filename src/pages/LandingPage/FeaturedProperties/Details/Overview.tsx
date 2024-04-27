@@ -37,8 +37,8 @@ export default function Overview() {
         </span>
       </div>
       <div className="pt-12">
-        <div className="flex">
-          <div className="flex flex-col">
+        <div className="flex gap-[30px]">
+          <div className="flex flex-col gap-[16px]">
             <span className="font-[600] text-[24px]">Overview</span>
             <span className="font-[400] text-[20px]">
               Discover the allure of this exquisite 3-bedroom flat, situated in
@@ -46,22 +46,36 @@ export default function Overview() {
               spacious flat offers a comfortable and luxurious living
               experience.
             </span>
-            <div className="flex flex-wrap gap-[16px]">
+            <div className="flex flex-wrap gap-[20px] mt-[12px]">
               <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[400px] flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Property ID:</span>
                 <span>{filteredProducts[0].secondFeature[0].property}</span>
               </div>
               <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
                 <span className="font-[700]">Address:</span>
-                <span>{filteredProducts[0].address}{", "}{filteredProducts[0].location}</span>
+                <span>
+                  {filteredProducts[0].address}
+                  {", "}
+                  {filteredProducts[0].location}
+                </span>
               </div>
               <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
-                <span className="font-[700]">Property ID:</span>
-                <span>{filteredProducts[0].secondFeature[0].property}</span>
+                <span className="font-[700]">Build Year:</span>
+                <span>
+                  {filteredProducts[0].secondFeature[0].buildDate.getFullYear()}
+                </span>
               </div>
               <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
-                <span className="font-[700]">Property ID:</span>
-                <span>{filteredProducts[0].secondFeature[0].property}</span>
+                <span className="font-[700]">No of Units Available</span>
+                <span>
+                  {filteredProducts[0].secondFeature[0].numUnits}
+                </span>
+              </div>
+              <div className="bg-[#F3F5FA99] border border-[#CBD6EB] rounded p-[10px] w-[340px] flex items-center gap-[10px] text-[16px] font-[400]">
+                <span className="font-[700]">Available From</span>
+                <span>
+                  {filteredProducts[0].secondFeature[0].buildDate.getFullYear()}
+                </span>
               </div>
             </div>
           </div>
