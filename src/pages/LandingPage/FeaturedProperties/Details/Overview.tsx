@@ -115,7 +115,7 @@ export default function Overview() {
       </div>
       <div className="flex flex-col py-12 text-[14px] font-[400]">
         <span className="font-[700] text-[24px] text-[#41454B]">Features</span>
-        <div className="grid grid-cols-3 gap-[24px]">
+        <div className="grid grid-cols-3 gap-[24px] pt-8">
           <div className="flex items-center gap-[10px]">
             <span>
               {ammenities.AC === true ? <GiCheckMark /> : <GiCrossMark />}
@@ -230,27 +230,27 @@ export default function Overview() {
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.walkInCloset === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Walk in Closet</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.exteriorLight === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Exterior Light</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.goodDrainage === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Good Drainage</span>
           </div>
           <div className="flex items-center gap-[10px]">
             <span>
-              {ammenities.security === true ? <GiCheckMark /> : <GiCrossMark />}
+              {ammenities.swimmingPool === true ? <GiCheckMark /> : <GiCrossMark />}
             </span>
-            <span>Security</span>
+            <span>Swimming Pool</span>
           </div>
         </div>
       </div>
