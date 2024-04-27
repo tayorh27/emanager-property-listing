@@ -5,13 +5,17 @@ import dimensionsicon from "../../../../assets/img/testAssets/dimensions.png";
 import agentphoto from "../../../../assets/img/testAssets/agentphoto.png";
 import { Link, useParams } from "react-router-dom";
 import {PaginationData} from "../../../../Lib/PaginationData"
+import { GiCheckMark, GiCrossMark } from "react-icons/gi";
 
 export default function Overview() {
   const { productId } = useParams();
   const filteredProducts = PaginationData.filter(
     (product) => product.id = productId
   )
-  console.log(filteredProducts[0].ammenities[0].CCTV);
+  console.log(filteredProducts[0].ammenities[0]);
+const ammenitiestext = filteredProducts[0].ammenities[0].map((amenity, index) =>
+  amenity ? <GiCheckMark key={index} /> : <GiCrossMark key={index} />
+);
   
   return (
     <div className="flex flex-col w-full">
@@ -111,7 +115,9 @@ export default function Overview() {
       <div className="flex flex-col py-12 text-[14px] font-[400]">
         <span className="font-[700] text-[24px] text-[#41454B]">Features</span>
         <div className="grid grid-cols-3 gap-[24px]">
-
+          <div className="flex">
+            ammenitiestext CCTV
+          </div>
         </div>
       </div>
     </div>
