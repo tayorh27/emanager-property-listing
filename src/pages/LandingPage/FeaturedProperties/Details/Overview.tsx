@@ -23,7 +23,7 @@ export default function Overview() {
       Carousel
       <div className="flex items-center justify-between w-full text-[20px]">
         <span className="flex w-full items-center text-center justify-center text-[40px] font-[600]">
-          N1,000,000
+          N{filteredProducts[0].price}
         </span>
         <span className="flex w-full items-center text-center justify-center gap-[24px]">
           <img src={buildingicon} alt="" />
