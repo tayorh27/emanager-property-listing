@@ -25,7 +25,7 @@ export default function Overview() {
 
       <div className="relative w-full p-2 my-1 h-full">
         <button className="absolute top-1/3 left-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400" disabled><FaLessThan /></button>
-        <button className="absolute top-1/3 right-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center"><FaGreaterThan /></button>
+        <button className="absolute top-1/3 right-1 bg-blue-600 text-white text-lg p-4 rounded-full flex items-center justify-center disabled:bg-gray-400"><FaGreaterThan /></button>
         <div className="flex items-center justify-center gap-6 h-full w-full">
           <img src={propertyImg} className="w-56" alt="" />
           <img src={propertyImg} className="w-56" alt="" />
