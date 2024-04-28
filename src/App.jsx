@@ -5,6 +5,7 @@ import LogIn from "./pages/Login";
 import Faqs from "./pages/LandingPage/Faqs/Faqs";
 import OurPartners from "./pages/OurPartners/OurPartners";
 import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 import AppRoutes from "./DASHBOARD/Routes/DashBoardAppRoutes";
 import ListAs from "./components/ListAs/ListAs";
 import ListAsLandlord from "./components/ListAs/ListAsLandlord";
@@ -12,9 +13,9 @@ import ListAsAgent from "./components/ListAs/ListAsAgent";
 import PageNotFound from "./pages/PageNotFound";
 import MainNav from "./components/MainNav";
 import MainFooter from "./components/MainFooter";
-import LandingPage from "./pages/LandingPage/LandingPage";
-import SearchFilteredProperties from './pages/SearchFilter/SearchFilteredProperties'
-import ReusableModal from "./UI/ReusableModal/ReusableModal";
+// import LandingPage from "./pages/LandingPage/LandingPage";
+// import SearchFilteredProperties from './pages/SearchFilter/SearchFilteredProperties'
+// import ReusableModal from "./UI/ReusableModal/ReusableModal";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const isDashLayoutRoute = useLocation().pathname.startsWith("/dashlayout") || useLocation().pathname === '/404'
   const isLandingPage = useLocation().pathname === '/'
   const navigate = useNavigate()
@@ -66,19 +68,20 @@ function App() {
       <main>
         {isDashLayoutRoute ? null : <MainNav SignUpModal={clickCreateAccount}/>}
         <Routes>
-          <Route path="/" element={<LandingPage
+          {/* <Route path="/" element={<LandingPage
            openSignup={openSignup} openFilter={openFilter} closeModal={closeModal}
            filterModal={clickFilter}
-           />} />
+           />} /> */}
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/dashlayout/*" element={<AppRoutes />} />
           <Route path="/ourpartners" element={<OurPartners />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/contactus" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/list-as" element={<ListAs />} />
           <Route path="/list-as-landlord" element={<ListAsLandlord />} />
-          <Route path="/search-filter" element={<SearchFilteredProperties filterModal={clickFilter}/>}/>
+          {/* <Route path="/search-filter" element={<SearchFilteredProperties filterModal={clickFilter}/>}/> */}
           <Route path="/list-as-agent" element={<ListAsAgent />} />
           <Route path="*" element={<Navigate replace to="/404" />}/>
           <Route path="/404" element={<PageNotFound/>} />

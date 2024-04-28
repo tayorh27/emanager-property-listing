@@ -12,10 +12,12 @@ const ListAsAgent = () => {
 
       <div id="shop_hero_part">
         <section id="shop_hero" className={listing.list_hero}>
-          <h2 className={styles.h2}>
-            Get the right tenants for your Properties here
-          </h2>
-          <p className={styles.p}>List your properties here!</p>
+          <div className="mt-20">
+            <h2 className={styles.h2}>
+              Get the right tenants for your Properties here
+            </h2>
+            <p className={styles.p}>List your properties here!</p>
+          </div>
         </section>
       </div>
 

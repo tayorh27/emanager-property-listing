@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import MainNav from "../MainNav";
-import logo from "../../assets/img/testAssets/Vector.webp";
-import { TiSocialTwitter } from "react-icons/ti";
-import { BiLogoInstagram } from "react-icons/bi";
-import { TiSocialFacebook } from "react-icons/ti";
-import { FaLinkedinIn } from "react-icons/fa";
+// import MainNav from "../MainNav";
+// import logo from "../../assets/img/testAssets/Vector.webp";
+// import { TiSocialTwitter } from "react-icons/ti";
+// import { BiLogoInstagram } from "react-icons/bi";
+// import { TiSocialFacebook } from "react-icons/ti";
+// import { FaLinkedinIn } from "react-icons/fa";
 
 //Import styles//
 import styles from "../../styles/LandingP.module.css";
@@ -22,15 +22,17 @@ const ListAs = () => {
 
   const goToListAsLandlord = () => navigate("/list-as-landlord");
   const goToListAsAgent = () => navigate("/list-as-agent");
-  
+
   return (
     <div>
       <div id="shop_hero_part">
         <section id="shop_hero" className={listing.list_hero}>
-          <h2 className={styles.h2}>
-            Get the right tenants for your Properties here
-          </h2>
-          <p className={styles.p}>List your properties here!</p>
+          <div className="mt-20">
+            <h2 className={styles.h2}>
+              Get the right tenants for your Properties here
+            </h2>
+            <p className={styles.p}>List your properties here!</p>
+          </div>
         </section>
       </div>
 
@@ -117,7 +119,7 @@ const ListAs = () => {
         </div>
       </div>
 
-      <div id="listas_footer_part">
+      {/* <div id="listas_footer_part">
         <div className={listing.footer}>
           <div className={listing.footer_logo}>
             <div className={` ${listing.logo}`}>
@@ -170,7 +172,7 @@ const ListAs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,68 @@
+.h3{
+    @apply text-[20px] text-[#222] font-semibold;
+    @apply pb-2;
+}
+
+/* Listing Hero part */
+.list_hero{
+    background-image: url("../assets/img/testAssets/unsplash_MP0bgaS_d1c.webp");
+    @apply flex justify-center text-center flex-col w-[100%] h-[45vh] p-[14px] mt-[1px];
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.list_hero h2 {
+    @apply w-[100%] ml-auto mr-auto;
+}
+
+.list_hero h2, .list_hero p{
+    @apply text-[#fff];
+}
+
+.main_desc{
+    @apply text-gray-500 px-20 py-4 text-center;
+}
+
+.options_row{
+    @apply flex justify-around items-center mt-20 mx-14 gap-28 mb-40 px-20;
+}
+
+.options_col{
+    @apply flex flex-col m-auto  w-[100%];
+}
+
+.options_info img{
+    @apply w-fit m-auto;
+}
+
+.options_info img:hover{
+    transform: scale(1.1);
+}
+
+/* .options_info h3{
+    @apply text-[#093C80] text-center mt-5;
+} */
+
+.options_info h2{
+    @apply text-[#000] text-[35px] font-bold px-8 mt-5;
+}
+
+.options_info p{
+    /* @apply text-[#163967] font-medium text-[13px] break-words; */
+    @apply text-gray-600 text-[16px] px-8 break-words;
+}
+
+/* .options_info button{
+    @apply bg-[#093C80] w-[100%] text-[#fff] my-5;
+}
+
+.options_info .btn_cos{
+    @apply bg-gray-200 w-[100%] text-gray-500 my-5;
+}
+
+
+
+.options_info button:hover{
+    @apply bg-blue-500 w-[100%] text-[#fff];
+} */

@@ -35,6 +35,9 @@
 .options_info h3{
     @apply text-[#093C80] text-center mt-5;
 }
+.options_info h2{
+    @apply text-[#000] text-[35px] font-bold text-center mt-5;
+}
 
 .options_info p{
     /* @apply text-[#163967] font-medium text-[13px] break-words; */
