@@ -345,7 +345,7 @@ export default function Overview() {
           </a>
         </span>
       </div>
-      <div className="flex flex-col items-center justify-center bg-[#FAFBFF] m-4 w-full p-2 h-[172px]">
+      <div className="flex flex-col items-center justify-evenly bg-[#FAFBFF] m-4 w-full p-2 h-[172px]">
         <span className="text-[24px] font-[600]">
           Interested in this property?
         </span>
@@ -355,6 +355,9 @@ export default function Overview() {
         >
           Contact Agent
         </button>
+      </div>
+      <div className="flex flex-col items-center justify-center py-12">
+        <span className="text-[32px] font-[600]">Other fantastic rentals in Lagos</span>
       </div>
     </div>
   );
