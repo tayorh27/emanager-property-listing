@@ -15,11 +15,11 @@ export default function Overview() {
   );
   const ammenities = filteredProducts[0].ammenities[0];
   console.log(ammenities.CCTV);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleNavAgent = () => {
-    navigate("/agent-profile")
-  }
+    navigate("/agent-profile");
+  };
 
   return (
     <div className="flex flex-col w-full">
@@ -346,8 +346,15 @@ export default function Overview() {
         </span>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#FAFBFF] m-4 w-full p-2 h-[172px]">
-        <span className="text-[24px] font-[600]">Interested in this property?</span>
-        <button className="text-[16px] font-[500] bg-[#547CC9] w-[180px] h-[48px] text-white rounded-lg" onClick={handleNavAgent}>Contact Agent</button>
+        <span className="text-[24px] font-[600]">
+          Interested in this property?
+        </span>
+        <button
+          className="text-[16px] font-[500] bg-[#547CC9] w-[180px] h-[48px] text-white rounded-lg"
+          onClick={handleNavAgent}
+        >
+          Contact Agent
+        </button>
       </div>
     </div>
   );
