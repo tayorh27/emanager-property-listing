@@ -1,6 +1,6 @@
 import { PropertyType, secondFeature, Data } from "./CardData";
 
-const originalData: PropertyType[] = [...Data];
+export const originalData: PropertyType[] = [...Data];
 
 const duplicatedData = Array.from({ length: 600 }).map((_, i) => {
   return {
