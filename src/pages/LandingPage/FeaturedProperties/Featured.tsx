@@ -23,7 +23,7 @@ const Featured = () => {
   // Call selectRandomProperties when the component mounts
   useState(() => {
     selectRandomProperties();
-  }, );
+  }, []);
   return (
     <div>
       <div className="flex items-center justify-between px-32 py-10">
