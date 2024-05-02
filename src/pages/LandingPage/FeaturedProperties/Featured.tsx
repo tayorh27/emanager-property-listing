@@ -6,21 +6,22 @@ import { Data } from '../../../Lib/CardData'
 
 const Featured = () => {
   return (
-    <FeaturedStyle>
-      <div className="top flex items-center justify-between">
+    <div>
+      <div className="flex items-center justify-between px-32 py-10">
         <h2 className='text-[2rem] font-[500] text-[#08090B]'>Featured Properties</h2>
         <Link to="/search-filter" className='text-[1.2rem] text-[#547CC9]'>
           See all
         </Link>
       </div>
-      <div className="cards">
+
+      {/* <div className="grid grid-cols-3 gap-4 px-12">
         {Array.from({ length: 3 }).map((_, index) => (
           <div className="card-item w-[100%]">
             <ReusableCard key={index} card={Data[0]} />
           </div>
         ))}
-      </div>
-    </FeaturedStyle>
+      </div> */}
+        </div>
   )
 }
 
