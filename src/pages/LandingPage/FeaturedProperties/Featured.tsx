@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import ReusableCard from '../../../UI/ReusableCard'
-import { Data } from '../../../Lib/CardData'
+import { PaginationData } from "../../../Lib/PaginationData";
 
 const Featured = () => {
   return (
@@ -13,6 +13,7 @@ const Featured = () => {
           See all
         </Link>
       </div>
+      <ReusableCard card={PaginationData[0]} />
 
       {/* <div className="grid grid-cols-3 gap-4 px-12">
         {Array.from({ length: 3 }).map((_, index) => (
