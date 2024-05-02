@@ -6,6 +6,7 @@ import { TbBed } from "react-icons/tb";
 import { GiHomeGarage } from "react-icons/gi";
 import { IoLocationSharp } from "react-icons/io5";
 import img from '../assets/img/testAssets/featured.png'
+import { useNavigate } from 'react-router-dom';
 
 const ReusableCard = ({card}) => {
   const [hoverState, setHoverState] = useState(false)
@@ -17,9 +18,15 @@ const ReusableCard = ({card}) => {
   const handleMouseLeave = () => {
     setHoverState(false);
   };
+  const navigate = useNavigate()
+  const propertyId = card.id
+  const handleClick = () => {
+    navigate(`/products/${propertyId}`)
+  }
 
   return (
-    <CardStyle onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>
+    <CardStyle onMouseOver={handleHover} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+      <p>{propertyId}</p>
       <div className="up flex">
         <img src={img} alt="" />
       </div>
@@ -27,19 +34,19 @@ const ReusableCard = ({card}) => {
       <div className='down'>
        <div className='mb-4'>
         <span className='text-[#132B58] font-500 text-[1.2rem]'>
-        # {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].price : 'N/A'}
+        # {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].property : 'N/A'}
         </span>
         <h2 className='text-[0.8rem]'>
-          Posted by 
-          {card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].nameOfAgent : 'N/A'}
+          Posted by{" "}
+          {card.nameOfAgent}
           </h2>
        </div>
        <div className='flex items-start justify-between text-[#898D93] text-[0.8rem]'>
         <div className='flex items-center gap-3'>
           <IoLocationSharp className='text-[1.2rem]'/>
           <div className='flex flex-col gap-1'>
-            <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].address : "?"},</span>
-            <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].addressJunction : "?"}</span>
+            <span>{card.address},</span>
+            <span>{card.nearestBusStop}</span>
           </div>
         </div>
           <span>{card.secondFeature && card.secondFeature.length > 0 ? card.secondFeature[0].numGarage : '?'} garage</span>
@@ -77,7 +84,7 @@ const ReusableCard = ({card}) => {
               <small className='flex gap-1 items-center text-[1rem]'>{card.numGarage} <span className='text-[#898D93] text-[0.7rem]'>garage</span></small>
             </span>
           </div>
-          <span className='flex items-center text-[#6C7076] flex gap-2 mt-1'><IoLocationSharp/> {card.location}</span>
+          <span className='flex items-center text-[#6C7076] gap-2 mt-1'><IoLocationSharp/> {card.location}</span>
           <div className="low h-[1rem] flex gap-3 items-center text-[#D3D4D7] font-500 mt-2">
             <img src={img} alt="" className='img-thumbnail'/>
             <small>Posted by {card.nameOfAgent}</small>

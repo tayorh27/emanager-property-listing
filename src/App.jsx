@@ -15,6 +15,7 @@ import MainFooter from "./components/MainFooter";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import SearchFilteredProperties from './pages/SearchFilter/SearchFilteredProperties'
 import ReusableModal from "./UI/ReusableModal/ReusableModal";
+import PropertyDetails from "./pages/LandingPage/FeaturedProperties/PropertyDetails";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -64,12 +65,21 @@ function App() {
     <div className="App">
       <ScrollToTop />
       <main>
-        {isDashLayoutRoute ? null : <MainNav SignUpModal={clickCreateAccount}/>}
+        {isDashLayoutRoute ? null : (
+          <MainNav SignUpModal={clickCreateAccount} />
+        )}
         <Routes>
-          <Route path="/" element={<LandingPage
-           openSignup={openSignup} openFilter={openFilter} closeModal={closeModal}
-           filterModal={clickFilter}
-           />} />
+          <Route
+            path="/"
+            element={
+              <LandingPage
+                openSignup={openSignup}
+                openFilter={openFilter}
+                closeModal={closeModal}
+                filterModal={clickFilter}
+              />
+            }
+          />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/dashlayout/*" element={<AppRoutes />} />
@@ -77,13 +87,17 @@ function App() {
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/list-as" element={<ListAs />} />
+          <Route path="/products/:productId" element={<PropertyDetails />} />
           <Route path="/list-as-landlord" element={<ListAsLandlord />} />
-          <Route path="/search-filter" element={<SearchFilteredProperties filterModal={clickFilter}/>}/>
+          <Route
+            path="/search-filter"
+            element={<SearchFilteredProperties filterModal={clickFilter} />}
+          />
           <Route path="/list-as-agent" element={<ListAsAgent />} />
-          <Route path="*" element={<Navigate replace to="/404" />}/>
-          <Route path="/404" element={<PageNotFound/>} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
+          <Route path="/404" element={<PageNotFound />} />
         </Routes>
-        {isDashLayoutRoute ? null : <MainFooter/>}
+        {isDashLayoutRoute ? null : <MainFooter />}
       </main>
     </div>
   );
