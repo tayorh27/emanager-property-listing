@@ -3,7 +3,7 @@ import propertyImg from "../../../../assets/img/testAssets/residence.png";
 import buildingicon from "../../../../assets/img/testAssets/building.png";
 import dimensionsicon from "../../../../assets/img/testAssets/dimensions.png";
 import agentphoto from "../../../../assets/img/testAssets/agentphoto.png";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { PaginationData } from "../../../../Lib/PaginationData";
 import { GiAbstract055, GiCheckMark, GiCrossMark } from "react-icons/gi";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
@@ -15,6 +15,11 @@ export default function Overview() {
   );
   const ammenities = filteredProducts[0].ammenities[0];
   console.log(ammenities.CCTV);
+  const navigate = useNavigate()
+
+  const handleNavAgent = () => {
+    navigate("/agent-profile")
+  }
 
   return (
     <div className="flex flex-col w-full">
