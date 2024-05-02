@@ -299,7 +299,7 @@ export default function Overview() {
       </div>
       <div className="flex flex-col gap-[16px] text-[16px] font-[400]">
         <div className="flex flex-col gap-[8px]">
-          <span className="font-[700]">Title</span>
+          <span className="font-[700]">Interesting Facts</span>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             possimus repellat maiores quas earum! Tenetur labore consequuntur
@@ -308,7 +308,7 @@ export default function Overview() {
           </span>
         </div>
         <div className="flex flex-col gap-[8px]">
-          <span className="font-[700]">Title</span>
+          <span className="font-[700]">Leisure Shopping</span>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             possimus repellat maiores quas earum! Tenetur labore consequuntur
@@ -317,7 +317,7 @@ export default function Overview() {
           </span>
         </div>
         <div className="flex flex-col gap-[8px]">
-          <span className="font-[700]">Title</span>
+          <span className="font-[700]">Popular Estates</span>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             possimus repellat maiores quas earum! Tenetur labore consequuntur
@@ -326,7 +326,7 @@ export default function Overview() {
           </span>
         </div>
         <div className="flex flex-col gap-[8px]">
-          <span className="font-[700]">Title</span>
+          <span className="font-[700]">Popular Estates</span>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             possimus repellat maiores quas earum! Tenetur labore consequuntur
@@ -334,7 +334,7 @@ export default function Overview() {
             voluptas aperiam facilis molestias ipsa?
           </span>
         </div>
-        <span className="underline text-[#1C3988]">
+        <span className="underline text-[#1C3988] text-[17px]">
           <a href="" target="_blank">
             find out more about this area
           </a>
