@@ -9,19 +9,13 @@ const Featured = () => {
   const [selectedProperties, setSelectedProperties] = useState<PropertyType[]>(
     []
   );
-
-  // Function to select 3 random properties
   const selectRandomProperties = () => {
-    // Shuffle PaginationData
     const shuffledData = PaginationData.sort(() => Math.random() - 0.5);
-    // Select the first 3 elements
     const selected = shuffledData.slice(0, 3);
-    // Set selected properties in state
     setSelectedProperties(selected);
   };
 
-  // Call selectRandomProperties when the component mounts
-  useState(() => {
+  useEffect(() => {
     selectRandomProperties();
   }, []);
   return (
@@ -41,13 +35,6 @@ const Featured = () => {
         </div>
       ))}
       </div>
-      {/* <div className="grid grid-cols-3 gap-4 px-12">
-        {Array.from({ length: 3 }).map((_, index) => (
-          <div className="card-item w-[100%]">
-            <ReusableCard key={index} card={Data[0]} />
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 }
