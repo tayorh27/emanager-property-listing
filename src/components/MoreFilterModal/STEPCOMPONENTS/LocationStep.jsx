@@ -3,7 +3,7 @@ import FilterModalHeader from '../../../UI/ReusableModal/ReusableFilterModalComp
 import { MdArrowDropUp } from "react-icons/md";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 
-const LocationStep = ({closeModal, next}) => {
+const LocationStep = ({closeModal, next, reviewSelection}) => {
   const [state, setState] = useState({
     isLocation : false,
     isLandmark : false,
@@ -37,7 +37,7 @@ const LocationStep = ({closeModal, next}) => {
 
   return (
     <div className='location-con min-w-[45vw] flex flex-col '>
-      <FilterModalHeader title="More Filters" closeModal={closeModal}/>
+      <FilterModalHeader title="More Filters" closeModal={closeModal} reviewSelection={reviewSelection}/>
       <div className="form flex w-full flex-col gap-[1.2rem]">
         <div className="input w-full flex flex-col gap-2">
           <label htmlFor="location" className='font-[500] text-[1.2rem]'>Location</label>
@@ -82,15 +82,18 @@ const LocationStep = ({closeModal, next}) => {
           </div>
         </div>
       </div>
-      <div className="actions flex items-center justify-between w-full mt-4">
-        <button className="px-4 py-1 border rounded-md text-[#547CC9] border-[#D2D4D4]">clear</button>
-        <button 
-          className="px-6 py-1  rounded-md text-[#fff] bg-[#547CC9]"
-          onClick={next}
-        >
-          next
-        </button>
-      </div>
+      {
+        reviewSelection === false ? 
+        <div className="actions flex items-center justify-between w-full mt-4">
+          <button className="px-4 py-1 border rounded-md text-[#547CC9] border-[#D2D4D4]" >clear</button>
+          <button 
+            className="px-6 py-1  rounded-md text-[#fff] bg-[#547CC9]"
+            onClick={next}
+          >
+            next
+          </button>
+        </div> : <div></div>
+      }
     </div>
   )
 }

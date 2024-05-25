@@ -3,7 +3,7 @@ import FilterModalHeader from '../../../UI/ReusableModal/ReusableFilterModalComp
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 
-const BedRoomStep = ({closeModal, next}) => {
+const BedRoomStep = ({closeModal, next, prev, reviewSelection}) => {
   const [state , setState] = useState({
     bedNum : 0,
     bathNum : 0,
@@ -52,7 +52,7 @@ const BedRoomStep = ({closeModal, next}) => {
 
   return (
     <div className='relative property-con min-w-[45vw] flex flex-col'>
-      <FilterModalHeader closeModal={closeModal} title="More Filters"/>
+      <FilterModalHeader title="More Filters" closeModal={closeModal} reviewSelection={reviewSelection}/>
       <div className="flex flex-col gap-[1rem] w-full">
         <span className='text-[1.2rem] font-[500]'>Beds and Rooms</span>
         <div className="actions flex flex-col gap-[1rem] w-full mb-[2rem]">
@@ -75,7 +75,7 @@ const BedRoomStep = ({closeModal, next}) => {
               onClick={() => clickPlus("bath")}
               className='text-[#9FA4A9] cursor-pointer'/>
               <span>{bathNum}</span>
-              <CiCircleMinus  className='text-[#9FA4A9] cursor-pointer'/>
+              <CiCircleMinus onClick={() => clickMinus("bath")}  className='text-[#9FA4A9] cursor-pointer'/>
             </div>
           </span>
           <span className='flex items-center justify-between'>
@@ -85,14 +85,36 @@ const BedRoomStep = ({closeModal, next}) => {
               onClick={() => clickPlus("toilet")}
               className='text-[#9FA4A9] cursor-pointer'/>
               <span>{toiletNum}</span>
-              <CiCircleMinus className='text-[#9FA4A9] cursor-pointer'/>
+              <CiCircleMinus onClick={() => clickMinus("toilet")} className='text-[#9FA4A9] cursor-pointer'/>
             </div>
           </span>
         </div>
-        <div className="furniture">
-          
-        </div>  
+        <div className="furniture flex flex-col gap-[1.5rem] w-full">
+          <h3 className='text-[1.2rem] font-[500]'>Furnishing</h3>
+          <div className="input flex items-center w-[60%] justify-between">
+            <div className='input-control flex items-center gap-[2rem] text-[#6E7379] cursor-pointer'>
+              <input className='cursor-pointer' type="checkbox" name="" id="" />
+              <label htmlFor="">Non-Furnished</label>
+            </div>
+            <div className="input-control flex items-center gap-[2rem] text-[#6E7379] cursor-pointer">
+              <input className='cursor-pointer' type="checkbox" name="" id="" />
+              <label htmlFor="">Furnished</label>
+            </div>
+          </div>
+        </div>
       </div>
+      {
+        reviewSelection === false ? 
+        <div className="actions flex items-center justify-between w-full mt-4">
+          <button className="px-4 py-1 border rounded-md text-[#547CC9] border-[#D2D4D4]" onClick={prev}>previous</button>
+          <button 
+            className="px-6 py-1  rounded-md text-[#fff] bg-[#547CC9]"
+            onClick={next}
+          >
+            next
+          </button>
+        </div> : <div></div>
+      }
     </div>
   )
 }

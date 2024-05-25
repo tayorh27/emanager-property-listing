@@ -37,10 +37,10 @@ const Data = [
   }
 ]
 
-const PropertyTypeStep = ({closeModal, next}) => {
+const PropertyTypeStep = ({closeModal, next,prev, reviewSelection}) => {
   return (
     <div className='relative property-con min-w-[45vw] flex flex-col'>
-      <FilterModalHeader title="More Filters" closeModal={closeModal}/>
+      <FilterModalHeader title="More Filters" closeModal={closeModal} reviewSelection={reviewSelection}/>
       <div className="types flex flex-col w-full">
         <span className='font-[500] text-[1.2rem] mb-[1.5rem]'>Property Type</span>
         <GridStyle>
@@ -53,15 +53,18 @@ const PropertyTypeStep = ({closeModal, next}) => {
         </GridStyle>
         <span className='text-[#547CC9] text-[0.8rem] cursor-pointer'> Show less property types</span>
       </div>
-      <div className="actions flex items-center justify-between w-full mt-4">
-        <button className="px-4 py-1 border rounded-md text-[#547CC9] border-[#D2D4D4]">clear</button>
-        <button 
-          className="px-6 py-1  rounded-md text-[#fff] bg-[#547CC9]"
-          onClick={next}
-        >
-          next
-        </button>
-      </div>
+      {
+        reviewSelection === false ? 
+        <div className="actions flex items-center justify-between w-full mt-4">
+          <button className="px-4 py-1 border rounded-md text-[#547CC9] border-[#D2D4D4]" onClick={prev}>previous</button>
+          <button 
+            className="px-6 py-1  rounded-md text-[#fff] bg-[#547CC9]"
+            onClick={next}
+          >
+            next
+          </button>
+        </div> : <div></div>
+      }
     </div>
   )
 }
