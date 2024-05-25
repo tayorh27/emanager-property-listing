@@ -63,6 +63,7 @@ const ModalStyle = styled.div`
     animation : modal-in 2s;
     max-width: 90%; /* Set maximum width */
     max-height: 90%; /* Set maximum height */
+    margin-top : 3rem;
     overflow: auto; /* Enable scrolling if content overflows */
     width: auto; /* Set width to auto */
     height: auto; /* Set height to auto */

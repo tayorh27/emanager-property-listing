@@ -19,6 +19,7 @@ const ReusableCard = ({card}) => {
     setHoverState(false);
   };
   const navigate = useNavigate()
+  
   const propertyId = card.id
   const handleClick = () => {
     navigate(`/products/${propertyId}`)
@@ -26,7 +27,6 @@ const ReusableCard = ({card}) => {
 
   return (
     <CardStyle onMouseOver={handleHover} onMouseLeave={handleMouseLeave} onClick={handleClick}>
-      <p>{propertyId}</p>
       <div className="up flex">
         <img src={img} alt="" />
       </div>

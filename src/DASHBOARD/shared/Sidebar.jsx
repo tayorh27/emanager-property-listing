@@ -11,6 +11,8 @@ import { FiSettings } from "react-icons/fi";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { useStateProvider } from '../context/StateProvider';
 
+import { RiUploadCloud2Line } from "react-icons/ri";
+import { FaRegFileVideo } from "react-icons/fa6";
 const BottomLinks = [
   {
     key : 1,
